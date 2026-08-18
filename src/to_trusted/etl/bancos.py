@@ -1,18 +1,12 @@
-import pandas as pd
-
+from pyspark.sql import DataFrame
 from to_trusted.etl.base import BaseETL
-from to_trusted.etl.normalize import normalize_cnpj, normalize_text
+from to_trusted.etl.normalize import normalize_cnpj_udf, normalize_text_udf
 
 
 class BancosETL(BaseETL):
     name = "bancos"
-    prefix = "Bancos/"
-    extension = ".tsv"
-    sep = "\t"
-    encoding = "utf-8"
 
-    def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        df = df.copy()
-        df["nome_norm"] = df["Nome"].apply(normalize_text)
-        df["cnpj_norm"] = df["CNPJ"].apply(normalize_cnpj)
-        return df
+    def clean_data(self, df: DataFrame) -> DataFrame:
+        return df.withColumn("nome_norm", normalize_text_udf(df["nome"])).withColumn(
+            "cnpj_norm", normalize_cnpj_udf(df["cnpj"])
+        )

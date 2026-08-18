@@ -1,9 +1,10 @@
+from __future__ import annotations
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
 from rapidfuzz import fuzz, process
-
 from to_delivery.acronyms import resolve_acronym
 from utils import read_table, write_table
+
 
 FINAL_COLUMNS = [
     "segmento", "cnpj", "nome", "cnpj_norm", "nome_norm",

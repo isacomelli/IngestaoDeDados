@@ -1,5 +1,7 @@
 import re
 import unicodedata
+from pyspark.sql import functions as F
+from pyspark.sql.types import StringType
 
 SUFFIXES = [
     "- PRUDENCIAL",
@@ -29,3 +31,7 @@ def normalize_cnpj(value: str) -> str:
     digits = re.sub(r"\D", "", value)
     digits = digits.lstrip("0")
     return digits
+
+
+normalize_text_udf = F.udf(normalize_text, StringType())
+normalize_cnpj_udf = F.udf(normalize_cnpj, StringType())

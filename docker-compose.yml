@@ -57,4 +57,4 @@ services:
       - "5050:80"
 
 volumes:
-  pgdata3:
+  pgdata:

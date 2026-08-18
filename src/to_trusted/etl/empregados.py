@@ -1,36 +1,30 @@
-import pandas as pd
-
+from pyspark.sql import DataFrame
+from pyspark.sql import functions as F
 from to_trusted.etl.base import BaseETL
-from to_trusted.etl.normalize import normalize_cnpj, normalize_text
+from to_trusted.etl.normalize import normalize_cnpj_udf, normalize_text_udf
+
+RATING_COLS = [
+    "geral",
+    "cultura_e_valores",
+    "diversidade_e_inclusao",
+    "qualidade_de_vida",
+    "alta_lideranca",
+    "remuneracao_e_beneficios",
+    "oportunidades_de_carreira",
+    "recomendam_pct",
+    "perspectiva_pct",
+]
 
 
 class EmpregadosETL(BaseETL):
     name = "empregados"
-    prefix = "Empregados/"
-    extension = ".csv"
-    sep = "|"
-    encoding = "utf-8"
 
-    RATING_COLS = [
-        "Geral",
-        "Cultura e valores",
-        "Diversidade e inclusão",
-        "Qualidade de vida",
-        "Alta liderança",
-        "Remuneração e benefícios",
-        "Oportunidades de carreira",
-        "Recomendam para outras pessoas(%)",
-        "Perspectiva positiva da empresa(%)",
-    ]
-
-    def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        df = df.copy()
-        df["nome_norm"] = df["Nome"].apply(normalize_text)
-        if "CNPJ" in df.columns:
-            df["cnpj_norm"] = df["CNPJ"].apply(normalize_cnpj)
-        else:
-            df["cnpj_norm"] = ""
-        for col in self.RATING_COLS:
-            if col in df.columns:
-                df[col] = pd.to_numeric(df[col], errors="coerce")
+    def clean_data(self, df: DataFrame) -> DataFrame:
+        df = df.withColumn("nome_norm", normalize_text_udf(df["nome"]))
+        df = df.withColumn(
+            "cnpj_norm",
+            F.when(df["cnpj"].isNotNull(), normalize_cnpj_udf(df["cnpj"])).otherwise(F.lit("")),
+        )
+        for col in RATING_COLS:
+            df = df.withColumn(col, F.col(col).cast("double"))
         return df

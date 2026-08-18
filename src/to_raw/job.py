@@ -1,5 +1,5 @@
+from __future__ import annotations
 import os
-import boto3
 from utils import setup_logger, write_table
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
@@ -7,13 +7,6 @@ from pyspark.sql import functions as F
 
 logger = setup_logger()
 
-
-import os
-
-from pyspark.sql import DataFrame, SparkSession
-from pyspark.sql import functions as F
-
-from utils import write_table
 
 DADOS_DIR = os.environ.get("DADOS_DIR", "/dados")
 
