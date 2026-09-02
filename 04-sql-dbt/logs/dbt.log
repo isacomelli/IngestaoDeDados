@@ -1,0 +1,2475 @@
+[0m13:37:49.443649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c412ebd0cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c412ed172d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c412ed16f90>]}
+
+
+============================== 13:37:49.513401 | 6f64e1eb-569a-4ac1-aeac-72195e2f5772 ==============================
+[0m13:37:49.513401 [info ] [MainThread]: Running with dbt=1.12.3
+[0m13:37:49.518366 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'introspect': 'True', 'no_print': 'None', 'profiles_dir': '/opt/dbt_project', 'version_check': 'True', 'write_json': 'True', 'debug': 'False', 'maximum_seed_size_mib': '1', 'hints_enabled': 'True', 'partial_parse': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'printer_width': '80', 'fail_fast': 'False', 'invocation_command': 'dbt seed --project-dir /opt/dbt_project --profiles-dir /opt/dbt_project --no-partial-parse', 'log_path': '/opt/dbt_project/logs', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'empty': 'False', 'warn_error': 'None', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True'}
+[0m13:37:51.912705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f64e1eb-569a-4ac1-aeac-72195e2f5772', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c412eaa3910>]}
+[0m13:37:52.032569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f64e1eb-569a-4ac1-aeac-72195e2f5772', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c41321c6c50>]}
+[0m13:37:52.040679 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m13:37:52.320743 [debug] [MainThread]: checksum: 6c1ae9bd9a97f59fedcbb7b317f743cc733bb2c36d74b192da6d8920653dd0b7, vars: {}, profile: atividade04_duckdb, target: dev, version: 1.12.3
+[0m13:37:52.331663 [debug] [MainThread]: Partial parsing not enabled
+[0m13:37:57.706450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6f64e1eb-569a-4ac1-aeac-72195e2f5772', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4125977850>]}
+[0m13:37:58.490249 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m13:37:58.562568 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m13:37:59.413321 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m13:38:00.131918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6f64e1eb-569a-4ac1-aeac-72195e2f5772', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c41259fc7d0>]}
+[0m13:38:00.138670 [info ] [MainThread]: Found 5 models, 13 data tests, 1 seed, 3 sources, 503 macros
+[0m13:38:00.144992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f64e1eb-569a-4ac1-aeac-72195e2f5772', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4125a264d0>]}
+[0m13:38:00.159233 [info ] [MainThread]: 
+[0m13:38:00.165467 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:38:00.171125 [info ] [MainThread]: 
+[0m13:38:00.177859 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m13:38:00.187565 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database'
+[0m13:38:00.950783 [debug] [ThreadPool]: Using duckdb connection "list_database"
+[0m13:38:00.956237 [debug] [ThreadPool]: On list_database: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database"'
+    
+  
+  
+[0m13:38:00.962812 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:02.048389 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "/tmp/airflowtmp_fru6rxr/data/database.duckdb": No such file or directory
+[0m13:38:02.054076 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database"'
+    
+  
+  
+[0m13:38:02.059495 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m13:38:02.065077 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:02.097680 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "/tmp/airflowtmp_fru6rxr/data/database.duckdb": No such file or directory
+[0m13:38:02.103736 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m13:38:02.110157 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m13:38:02.115379 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:02.150200 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:38:02.155958 [debug] [MainThread]: Connection 'list_database' was properly closed.
+[0m13:38:02.161559 [info ] [MainThread]: 
+[0m13:38:02.168683 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.98 seconds (1.98s).
+[0m13:38:02.176869 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Cannot open file "/tmp/airflowtmp_fru6rxr/data/database.duckdb": No such file or directory
+[0m13:38:02.434465 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 110, in exception_handler
+    yield
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "/tmp/airflowtmp_fru6rxr/data/database.duckdb": No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 110, in exception_handler
+    yield
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 20, in macro
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/clients/jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 50, in macro
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/clients/jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 33, in macro
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/clients/jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 52, in macro
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/sql/connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "/tmp/airflowtmp_fru6rxr/data/database.duckdb": No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 404, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/cli/main.py", line 747, in seed
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/task/runnable.py", line 775, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/task/runnable.py", line 701, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/task/run.py", line 1313, in before_run
+    self.create_schemas(adapter, required_schemas)
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/task/runnable.py", line 883, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt_common/utils/executor.py", line 20, in connected
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/task/runnable.py", line 858, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/sql/impl.py", line 219, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.venv-dbt/lib/python3.11/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "/tmp/airflowtmp_fru6rxr/data/database.duckdb": No such file or directory
+
+[0m13:38:02.471701 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 13.242297, "process_in_blocks": "48400", "process_kernel_time": 3.393326, "process_mem_max_rss": "173068", "process_out_blocks": "0", "process_user_time": 15.806779}
+[0m13:38:02.479942 [debug] [MainThread]: Command `dbt seed` failed at 13:38:02.478356 after 13.25 seconds
+[0m13:38:02.486768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c412ee2e110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4124593cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c4125b24190>]}
+[0m13:38:02.495037 [debug] [MainThread]: Flushing usage events
+[0m13:38:03.817381 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:27:52.385015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b603780d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b606c4b5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b6035fe990>]}
+
+
+============================== 17:27:52.712526 | f812f84a-c711-4f11-a20c-eeb89ce0a9d1 ==============================
+[0m17:27:52.712526 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:27:52.720127 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'log_format': 'default', 'debug': 'False', 'invocation_command': 'dbt seed --project-dir /opt/dbt_project --profiles-dir /opt/dbt_project --no-partial-parse', 'log_path': '/opt/dbt_project/logs', 'no_print': 'None', 'fail_fast': 'False', 'empty': 'False', 'static_parser': 'True', 'warn_error': 'None', 'partial_parse': 'False', 'use_colors': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'printer_width': '80', 'introspect': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'profiles_dir': '/opt/dbt_project', 'write_json': 'True'}
+[0m17:27:54.700523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b5fb705d50>]}
+[0m17:27:54.807294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b606c6e310>]}
+[0m17:27:54.927516 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m17:27:55.466288 [debug] [MainThread]: checksum: 6c1ae9bd9a97f59fedcbb7b317f743cc733bb2c36d74b192da6d8920653dd0b7, vars: {}, profile: atividade04_duckdb, target: dev, version: 1.12.3
+[0m17:27:55.469833 [debug] [MainThread]: Partial parsing not enabled
+[0m17:27:58.541234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b604b7e790>]}
+[0m17:27:58.718011 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:27:58.853898 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:27:59.327290 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:27:59.465124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b5f8f81d90>]}
+[0m17:27:59.466378 [info ] [MainThread]: Found 5 models, 13 data tests, 1 seed, 3 sources, 503 macros
+[0m17:27:59.467340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b5fa5755d0>]}
+[0m17:27:59.469855 [info ] [MainThread]: 
+[0m17:27:59.471015 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:27:59.472194 [info ] [MainThread]: 
+[0m17:27:59.473333 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:27:59.474949 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database'
+[0m17:27:59.925827 [debug] [ThreadPool]: Using duckdb connection "list_database"
+[0m17:27:59.927498 [debug] [ThreadPool]: On list_database: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database"'
+    
+  
+  
+[0m17:27:59.928855 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:01.865770 [debug] [ThreadPool]: SQL status: OK in 1.937 seconds
+[0m17:28:01.867865 [debug] [ThreadPool]: On list_database: Close
+[0m17:28:01.869762 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_database, now create_database_main)
+[0m17:28:01.871146 [debug] [ThreadPool]: Creating schema "database: "database"
+schema: "main"
+"
+[0m17:28:01.879010 [debug] [ThreadPool]: Using duckdb connection "create_database_main"
+[0m17:28:01.880057 [debug] [ThreadPool]: On create_database_main: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "create_database_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='database'
+        and type != 'duckdb'
+    
+  
+[0m17:28:01.881052 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:01.896838 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m17:28:01.899371 [debug] [ThreadPool]: Using duckdb connection "create_database_main"
+[0m17:28:01.900349 [debug] [ThreadPool]: On create_database_main: BEGIN
+[0m17:28:01.901674 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:28:01.902647 [debug] [ThreadPool]: Using duckdb connection "create_database_main"
+[0m17:28:01.903575 [debug] [ThreadPool]: On create_database_main: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "create_database_main"} */
+
+    
+    
+        create schema if not exists "database"."main"
+    
+[0m17:28:01.905045 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:28:01.906484 [debug] [ThreadPool]: On create_database_main: COMMIT
+[0m17:28:01.907326 [debug] [ThreadPool]: Using duckdb connection "create_database_main"
+[0m17:28:01.908284 [debug] [ThreadPool]: On create_database_main: COMMIT
+[0m17:28:01.909704 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:28:01.910455 [debug] [ThreadPool]: On create_database_main: Close
+[0m17:28:01.916212 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_database_main, now list_database_delivery)
+[0m17:28:01.917105 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_main'
+[0m17:28:01.917909 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_trusted'
+[0m17:28:01.921890 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:01.923528 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:01.925113 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:01.926142 [debug] [ThreadPool]: On list_database_delivery: BEGIN
+[0m17:28:01.927334 [debug] [ThreadPool]: On list_database_main: BEGIN
+[0m17:28:01.928477 [debug] [ThreadPool]: On list_database_trusted: BEGIN
+[0m17:28:01.929362 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:01.930130 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:01.931107 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:01.933061 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:01.933997 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:01.934948 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:01.935302 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:01.936049 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:01.936828 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:01.937671 [debug] [ThreadPool]: On list_database_delivery: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_delivery"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'delivery'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:01.938494 [debug] [ThreadPool]: On list_database_main: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_main"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:01.939303 [debug] [ThreadPool]: On list_database_trusted: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_trusted"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'trusted'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:01.975758 [debug] [ThreadPool]: SQL status: OK in 0.035 seconds
+[0m17:28:01.976223 [debug] [ThreadPool]: SQL status: OK in 0.035 seconds
+[0m17:28:01.976574 [debug] [ThreadPool]: SQL status: OK in 0.037 seconds
+[0m17:28:01.978191 [debug] [ThreadPool]: On list_database_main: ROLLBACK
+[0m17:28:01.979731 [debug] [ThreadPool]: On list_database_trusted: ROLLBACK
+[0m17:28:01.981210 [debug] [ThreadPool]: On list_database_delivery: ROLLBACK
+[0m17:28:01.982297 [debug] [ThreadPool]: On list_database_main: Close
+[0m17:28:01.983252 [debug] [ThreadPool]: On list_database_trusted: Close
+[0m17:28:01.984238 [debug] [ThreadPool]: On list_database_delivery: Close
+[0m17:28:01.986539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b5fa456a50>]}
+[0m17:28:01.987640 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:01.988347 [debug] [MainThread]: On master: BEGIN
+[0m17:28:01.989134 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:28:01.990546 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:28:01.991489 [debug] [MainThread]: On master: COMMIT
+[0m17:28:01.992210 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:01.992919 [debug] [MainThread]: On master: COMMIT
+[0m17:28:01.994247 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:28:01.995052 [debug] [MainThread]: On master: Close
+[0m17:28:02.056050 [debug] [Thread-1 (]: Began running node seed.atividade04_dbt.de_para_bancos
+[0m17:28:02.057405 [info ] [Thread-1 (]: 1 of 1 START seed file main.de_para_bancos ..................................... [RUN]
+[0m17:28:02.058396 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_database_delivery, now seed.atividade04_dbt.de_para_bancos)
+[0m17:28:02.059274 [debug] [Thread-1 (]: Began compiling node seed.atividade04_dbt.de_para_bancos
+[0m17:28:02.060174 [debug] [Thread-1 (]: Began executing node seed.atividade04_dbt.de_para_bancos
+[0m17:28:02.087244 [debug] [Thread-1 (]: Using duckdb connection "seed.atividade04_dbt.de_para_bancos"
+[0m17:28:02.088410 [debug] [Thread-1 (]: On seed.atividade04_dbt.de_para_bancos: BEGIN
+[0m17:28:02.089283 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:28:02.090824 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:28:02.091799 [debug] [Thread-1 (]: Using duckdb connection "seed.atividade04_dbt.de_para_bancos"
+[0m17:28:02.092928 [debug] [Thread-1 (]: On seed.atividade04_dbt.de_para_bancos: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "seed.atividade04_dbt.de_para_bancos"} */
+
+    create table "database"."main"."de_para_bancos" ("sigla_origem" text,"nome_canonico" text)
+  
+[0m17:28:02.094537 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:28:02.105025 [debug] [Thread-1 (]: Using duckdb connection "seed.atividade04_dbt.de_para_bancos"
+[0m17:28:02.106127 [debug] [Thread-1 (]: On seed.atividade04_dbt.de_para_bancos: 
+          COPY "database"."main"."de_para_bancos" FROM '/opt/dbt_project/seeds/de_para_bancos.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m17:28:02.162373 [debug] [Thread-1 (]: SQL status: OK in 0.055 seconds
+[0m17:28:02.168136 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.atividade04_dbt.de_para_bancos"
+[0m17:28:02.190226 [debug] [Thread-1 (]: On seed.atividade04_dbt.de_para_bancos: COMMIT
+[0m17:28:02.191413 [debug] [Thread-1 (]: Using duckdb connection "seed.atividade04_dbt.de_para_bancos"
+[0m17:28:02.192678 [debug] [Thread-1 (]: On seed.atividade04_dbt.de_para_bancos: COMMIT
+[0m17:28:02.235429 [debug] [Thread-1 (]: SQL status: OK in 0.042 seconds
+[0m17:28:02.238031 [debug] [Thread-1 (]: On seed.atividade04_dbt.de_para_bancos: Close
+[0m17:28:02.265497 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f812f84a-c711-4f11-a20c-eeb89ce0a9d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b5f84df290>]}
+[0m17:28:02.267240 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file main.de_para_bancos ................................. [[32mINSERT 88[0m in 0.18s]
+[0m17:28:02.268951 [debug] [Thread-1 (]: Finished running node seed.atividade04_dbt.de_para_bancos
+[0m17:28:02.272321 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:02.273539 [debug] [MainThread]: On master: BEGIN
+[0m17:28:02.274479 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:28:02.275843 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:28:02.276721 [debug] [MainThread]: On master: COMMIT
+[0m17:28:02.277535 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:02.278285 [debug] [MainThread]: On master: COMMIT
+[0m17:28:02.279444 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:28:02.280228 [debug] [MainThread]: On master: Close
+[0m17:28:02.281210 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:28:02.281969 [debug] [MainThread]: Connection 'seed.atividade04_dbt.de_para_bancos' was properly closed.
+[0m17:28:02.282633 [debug] [MainThread]: Connection 'list_database_main' was properly closed.
+[0m17:28:02.283312 [debug] [MainThread]: Connection 'list_database_trusted' was properly closed.
+[0m17:28:02.284050 [info ] [MainThread]: 
+[0m17:28:02.284909 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 2.81 seconds (2.81s).
+[0m17:28:02.285981 [debug] [MainThread]: Command end result
+[0m17:28:02.333860 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:02.339758 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:02.345323 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:02.354541 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/dbt_project/target/run_results.json
+[0m17:28:02.355465 [info ] [MainThread]: 
+[0m17:28:02.356373 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:28:02.357120 [info ] [MainThread]: 
+[0m17:28:02.357875 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m17:28:02.359159 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 10.114092, "process_in_blocks": "48360", "process_kernel_time": 1.138334, "process_mem_max_rss": "242736", "process_out_blocks": "72216", "process_user_time": 7.37321}
+[0m17:28:02.360146 [debug] [MainThread]: Command `dbt seed` succeeded at 17:28:02.360021 after 10.12 seconds
+[0m17:28:02.360911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b603783750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b5f90cc650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76b603703c10>]}
+[0m17:28:02.361668 [debug] [MainThread]: Flushing usage events
+[0m17:28:02.962924 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:28:09.865134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e534e1210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e535bba90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e534e3a90>]}
+
+
+============================== 17:28:09.870983 | f29042e1-7b59-4eb7-af0b-d1bc981e7a23 ==============================
+[0m17:28:09.870983 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:28:09.872311 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'empty': 'False', 'log_path': '/opt/dbt_project/logs', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'profiles_dir': '/opt/dbt_project', 'introspect': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'quiet': 'False', 'write_json': 'True', 'invocation_command': 'dbt run --project-dir /opt/dbt_project --profiles-dir /opt/dbt_project --no-partial-parse', 'printer_width': '80', 'no_print': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'False', 'use_colors': 'True'}
+[0m17:28:10.104198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e53320110>]}
+[0m17:28:10.171616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e56a7e250>]}
+[0m17:28:10.174394 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m17:28:10.259256 [debug] [MainThread]: checksum: 6c1ae9bd9a97f59fedcbb7b317f743cc733bb2c36d74b192da6d8920653dd0b7, vars: {}, profile: atividade04_duckdb, target: dev, version: 1.12.3
+[0m17:28:10.263453 [debug] [MainThread]: Partial parsing not enabled
+[0m17:28:12.219377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4b143090>]}
+[0m17:28:12.361632 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:12.366776 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:12.381359 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:12.399908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4903b910>]}
+[0m17:28:12.400876 [info ] [MainThread]: Found 5 models, 13 data tests, 1 seed, 3 sources, 503 macros
+[0m17:28:12.401819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4b5b6910>]}
+[0m17:28:12.403990 [info ] [MainThread]: 
+[0m17:28:12.404820 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:28:12.405504 [info ] [MainThread]: 
+[0m17:28:12.406376 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:28:12.411123 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database'
+[0m17:28:12.411911 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database'
+[0m17:28:12.446452 [debug] [ThreadPool]: Using duckdb connection "list_database"
+[0m17:28:12.446949 [debug] [ThreadPool]: Using duckdb connection "list_database"
+[0m17:28:12.451793 [debug] [ThreadPool]: On list_database: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database"'
+    
+  
+  
+[0m17:28:12.453056 [debug] [ThreadPool]: On list_database: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"database"'
+    
+  
+  
+[0m17:28:12.453993 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:12.454824 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:12.481720 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m17:28:12.482207 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m17:28:12.484042 [debug] [ThreadPool]: On list_database: Close
+[0m17:28:12.486155 [debug] [ThreadPool]: On list_database: Close
+[0m17:28:12.488078 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_database, now create_database_trusted)
+[0m17:28:12.488701 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_database, now create_database_delivery)
+[0m17:28:12.489528 [debug] [ThreadPool]: Creating schema "database: "database"
+schema: "trusted"
+"
+[0m17:28:12.490346 [debug] [ThreadPool]: Creating schema "database: "database"
+schema: "delivery"
+"
+[0m17:28:12.496968 [debug] [ThreadPool]: Using duckdb connection "create_database_trusted"
+[0m17:28:12.498316 [debug] [ThreadPool]: Using duckdb connection "create_database_delivery"
+[0m17:28:12.499049 [debug] [ThreadPool]: On create_database_trusted: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "create_database_trusted"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='database'
+        and type != 'duckdb'
+    
+  
+[0m17:28:12.499734 [debug] [ThreadPool]: On create_database_delivery: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "create_database_delivery"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='database'
+        and type != 'duckdb'
+    
+  
+[0m17:28:12.500747 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:12.501425 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:12.503277 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:28:12.503865 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:28:12.505585 [debug] [ThreadPool]: Using duckdb connection "create_database_trusted"
+[0m17:28:12.507148 [debug] [ThreadPool]: Using duckdb connection "create_database_delivery"
+[0m17:28:12.507864 [debug] [ThreadPool]: On create_database_trusted: BEGIN
+[0m17:28:12.508658 [debug] [ThreadPool]: On create_database_delivery: BEGIN
+[0m17:28:12.510169 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:28:12.510792 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:28:12.511277 [debug] [ThreadPool]: Using duckdb connection "create_database_trusted"
+[0m17:28:12.512053 [debug] [ThreadPool]: Using duckdb connection "create_database_delivery"
+[0m17:28:12.512847 [debug] [ThreadPool]: On create_database_trusted: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "create_database_trusted"} */
+
+    
+    
+        create schema if not exists "database"."trusted"
+    
+[0m17:28:12.513568 [debug] [ThreadPool]: On create_database_delivery: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "create_database_delivery"} */
+
+    
+    
+        create schema if not exists "database"."delivery"
+    
+[0m17:28:12.514803 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:28:12.515513 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:28:12.516549 [debug] [ThreadPool]: On create_database_trusted: COMMIT
+[0m17:28:12.517670 [debug] [ThreadPool]: On create_database_delivery: COMMIT
+[0m17:28:12.518399 [debug] [ThreadPool]: Using duckdb connection "create_database_trusted"
+[0m17:28:12.519124 [debug] [ThreadPool]: Using duckdb connection "create_database_delivery"
+[0m17:28:12.519836 [debug] [ThreadPool]: On create_database_trusted: COMMIT
+[0m17:28:12.520637 [debug] [ThreadPool]: On create_database_delivery: COMMIT
+[0m17:28:12.596071 [debug] [ThreadPool]: SQL status: OK in 0.075 seconds
+[0m17:28:12.597507 [debug] [ThreadPool]: On create_database_trusted: Close
+[0m17:28:12.689464 [debug] [ThreadPool]: SQL status: OK in 0.167 seconds
+[0m17:28:12.691047 [debug] [ThreadPool]: On create_database_delivery: Close
+[0m17:28:12.693923 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_database_delivery, now list_database_trusted)
+[0m17:28:12.694717 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_database_trusted, now list_database_delivery)
+[0m17:28:12.695685 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_main'
+[0m17:28:12.700063 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:12.701688 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:12.704212 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:12.705411 [debug] [ThreadPool]: On list_database_trusted: BEGIN
+[0m17:28:12.706207 [debug] [ThreadPool]: On list_database_delivery: BEGIN
+[0m17:28:12.706947 [debug] [ThreadPool]: On list_database_main: BEGIN
+[0m17:28:12.707759 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:12.708492 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:12.709236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:12.710917 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:28:12.711318 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:28:12.713316 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:12.715522 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:12.716676 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:12.717547 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:12.718386 [debug] [ThreadPool]: On list_database_trusted: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_trusted"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'trusted'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:12.719290 [debug] [ThreadPool]: On list_database_delivery: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_delivery"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'delivery'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:12.720209 [debug] [ThreadPool]: On list_database_main: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_main"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:12.724836 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:28:12.725435 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:12.725854 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:28:12.727566 [debug] [ThreadPool]: On list_database_delivery: ROLLBACK
+[0m17:28:12.729189 [debug] [ThreadPool]: On list_database_trusted: ROLLBACK
+[0m17:28:12.730667 [debug] [ThreadPool]: On list_database_main: ROLLBACK
+[0m17:28:12.731727 [debug] [ThreadPool]: On list_database_delivery: Close
+[0m17:28:12.732560 [debug] [ThreadPool]: On list_database_trusted: Close
+[0m17:28:12.733568 [debug] [ThreadPool]: On list_database_main: Close
+[0m17:28:12.736204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4b23d090>]}
+[0m17:28:12.737295 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:12.738135 [debug] [MainThread]: On master: BEGIN
+[0m17:28:12.738898 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:28:12.740234 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:28:12.741064 [debug] [MainThread]: On master: COMMIT
+[0m17:28:12.741821 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:12.742525 [debug] [MainThread]: On master: COMMIT
+[0m17:28:12.743758 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:28:12.745084 [debug] [MainThread]: On master: Close
+[0m17:28:12.750715 [debug] [Thread-1 (]: Began running node model.atividade04_dbt.tr_bancos
+[0m17:28:12.751305 [debug] [Thread-2 (]: Began running node model.atividade04_dbt.tr_empregados
+[0m17:28:12.751746 [debug] [Thread-3 (]: Began running node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:12.752729 [info ] [Thread-1 (]: 1 of 5 START sql table model trusted.tr_bancos ................................. [RUN]
+[0m17:28:12.753837 [info ] [Thread-2 (]: 2 of 5 START sql table model trusted.tr_empregados ............................. [RUN]
+[0m17:28:12.754773 [info ] [Thread-3 (]: 3 of 5 START sql table model trusted.tr_reclamacoes ............................ [RUN]
+[0m17:28:12.755701 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_database_main, now model.atividade04_dbt.tr_bancos)
+[0m17:28:12.756817 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_database_trusted, now model.atividade04_dbt.tr_empregados)
+[0m17:28:12.764829 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_database_delivery, now model.atividade04_dbt.tr_reclamacoes)
+[0m17:28:12.765882 [debug] [Thread-1 (]: Began compiling node model.atividade04_dbt.tr_bancos
+[0m17:28:12.766762 [debug] [Thread-2 (]: Began compiling node model.atividade04_dbt.tr_empregados
+[0m17:28:12.767531 [debug] [Thread-3 (]: Began compiling node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:12.776172 [debug] [Thread-1 (]: Writing injected SQL for node "model.atividade04_dbt.tr_bancos"
+[0m17:28:12.780519 [debug] [Thread-2 (]: Writing injected SQL for node "model.atividade04_dbt.tr_empregados"
+[0m17:28:12.786981 [debug] [Thread-3 (]: Writing injected SQL for node "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:12.800959 [debug] [Thread-3 (]: Began executing node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:12.820487 [debug] [Thread-2 (]: Began executing node model.atividade04_dbt.tr_empregados
+[0m17:28:12.840956 [debug] [Thread-1 (]: Began executing node model.atividade04_dbt.tr_bancos
+[0m17:28:12.867888 [debug] [Thread-2 (]: Writing runtime sql for node "model.atividade04_dbt.tr_empregados"
+[0m17:28:12.868644 [debug] [Thread-3 (]: Writing runtime sql for node "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:12.872182 [debug] [Thread-1 (]: Writing runtime sql for node "model.atividade04_dbt.tr_bancos"
+[0m17:28:13.529399 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.tr_bancos"
+[0m17:28:14.029591 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: BEGIN
+[0m17:28:14.032515 [debug] [Thread-2 (]: Using duckdb connection "model.atividade04_dbt.tr_empregados"
+[0m17:28:14.037130 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:28:14.041126 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: BEGIN
+[0m17:28:14.042852 [debug] [Thread-3 (]: Using duckdb connection "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:14.048115 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m17:28:14.050206 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:28:14.052957 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: BEGIN
+[0m17:28:14.055289 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.tr_bancos"
+[0m17:28:14.058637 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m17:28:14.060206 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:28:14.062583 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_bancos"} */
+
+    
+
+    create  table
+      "database"."trusted"."tr_bancos__dbt_tmp"
+  
+    
+    as (
+      
+
+WITH raw_data AS (
+    SELECT
+        TRIM(Nome) AS nome,
+        
+TRIM(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            STRIP_ACCENTS(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(
+                            REPLACE(
+                                REPLACE(
+                                    REPLACE(
+                                        UPPER(TRIM(COALESCE(CAST(Nome AS VARCHAR), ''))),
+                                        '- PRUDENCIAL', ''
+                                    ),
+                                    '(CONGLOMERADO)', ''
+                                ),
+                                'S.A.', ''
+                            ),
+                            'S/A', ''
+                        ),
+                        'LTDA', ''
+                    ),
+                    '-PRUDENCIAL', ''
+                )
+            ),
+            '[^A-Z0-9 ]', '', 'g'
+        ),
+        '\\s+', ' ', 'g'
+    )
+)
+ AS nome_norm,
+        
+COALESCE(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            COALESCE(CAST(CNPJ AS VARCHAR), ''),
+            '[^0-9]', '', 'g'
+        ),
+        '^0+', ''
+    ),
+    ''
+)
+ AS cnpj_norm,
+        TRIM(Segmento) AS segmento
+    FROM "database"."raw"."bancos"
+    WHERE Nome IS NOT NULL AND TRIM(Nome) != ''
+),
+
+ranked AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY (CASE WHEN cnpj_norm != '' AND cnpj_norm IS NOT NULL THEN cnpj_norm ELSE nome_norm END)
+            ORDER BY
+                (CASE WHEN segmento IS NOT NULL AND segmento != '' THEN 1 ELSE 2 END),
+                nome
+        ) AS row_num
+    FROM raw_data
+)
+
+SELECT
+    nome,
+    nome_norm,
+    cnpj_norm,
+    segmento
+FROM ranked
+WHERE row_num = 1
+    );
+    
+  
+[0m17:28:14.064524 [debug] [Thread-2 (]: Using duckdb connection "model.atividade04_dbt.tr_empregados"
+[0m17:28:14.066469 [debug] [Thread-3 (]: SQL status: OK in 0.006 seconds
+[0m17:28:14.068105 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_empregados"} */
+
+    
+
+    create  table
+      "database"."trusted"."tr_empregados__dbt_tmp"
+  
+    
+    as (
+      
+
+WITH raw_emp AS (
+    SELECT
+        TRIM(Nome) AS nome,
+        
+TRIM(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            STRIP_ACCENTS(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(
+                            REPLACE(
+                                REPLACE(
+                                    REPLACE(
+                                        UPPER(TRIM(COALESCE(CAST(Nome AS VARCHAR), ''))),
+                                        '- PRUDENCIAL', ''
+                                    ),
+                                    '(CONGLOMERADO)', ''
+                                ),
+                                'S.A.', ''
+                            ),
+                            'S/A', ''
+                        ),
+                        'LTDA', ''
+                    ),
+                    '-PRUDENCIAL', ''
+                )
+            ),
+            '[^A-Z0-9 ]', '', 'g'
+        ),
+        '\\s+', ' ', 'g'
+    )
+)
+ AS nome_norm,
+        
+COALESCE(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            COALESCE(CAST(CNPJ AS VARCHAR), ''),
+            '[^0-9]', '', 'g'
+        ),
+        '^0+', ''
+    ),
+    ''
+)
+ AS cnpj_norm,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Geral", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_geral,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Cultura e valores", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_cultura,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Diversidade e inclusão", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_diversidade,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Qualidade de vida", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_qualidade_vida,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Alta liderança", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_lideranca,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Remuneração e benefícios", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_remuneracao,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Oportunidades de carreira", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_carreira,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Recomendam para outras pessoas(%)", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_recomendam_pct,
+        TRY_CAST(TRIM(REPLACE(REPLACE("Perspectiva positiva da empresa(%)", ' ', ''), ',', '.')) AS DOUBLE) AS avaliacao_perspectiva_pct
+    FROM "database"."raw"."empregados"
+    WHERE Nome IS NOT NULL AND TRIM(Nome) != ''
+),
+
+with_canonical AS (
+    SELECT
+        e.*,
+        COALESCE(d.nome_canonico, e.nome_norm) AS nome_canonico
+    FROM raw_emp e
+    LEFT JOIN "database"."main"."de_para_bancos" d
+        ON e.nome_norm = d.sigla_origem
+),
+
+dedup AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (
+            PARTITION BY nome_canonico
+            ORDER BY 
+                (CASE WHEN cnpj_norm != '' AND cnpj_norm IS NOT NULL THEN 1 ELSE 2 END),
+                avaliacao_geral DESC NULLS LAST
+        ) AS row_num
+    FROM with_canonical
+)
+
+SELECT
+    nome,
+    nome_norm,
+    cnpj_norm,
+    nome_canonico,
+    avaliacao_geral,
+    avaliacao_cultura,
+    avaliacao_diversidade,
+    avaliacao_qualidade_vida,
+    avaliacao_lideranca,
+    avaliacao_remuneracao,
+    avaliacao_carreira,
+    avaliacao_recomendam_pct,
+    avaliacao_perspectiva_pct
+FROM dedup
+WHERE row_num = 1
+    );
+    
+  
+[0m17:28:14.069347 [debug] [Thread-3 (]: Using duckdb connection "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:14.071215 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_reclamacoes"} */
+
+    
+
+    create  table
+      "database"."trusted"."tr_reclamacoes__dbt_tmp"
+  
+    
+    as (
+      
+
+WITH raw_rec AS (
+    SELECT
+        ano,
+        trimestre,
+        categoria,
+        tipo,
+        TRIM(instituicao_financeira) AS instituicao_financeira,
+        
+TRIM(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            STRIP_ACCENTS(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(
+                            REPLACE(
+                                REPLACE(
+                                    REPLACE(
+                                        UPPER(TRIM(COALESCE(CAST(instituicao_financeira AS VARCHAR), ''))),
+                                        '- PRUDENCIAL', ''
+                                    ),
+                                    '(CONGLOMERADO)', ''
+                                ),
+                                'S.A.', ''
+                            ),
+                            'S/A', ''
+                        ),
+                        'LTDA', ''
+                    ),
+                    '-PRUDENCIAL', ''
+                )
+            ),
+            '[^A-Z0-9 ]', '', 'g'
+        ),
+        '\\s+', ' ', 'g'
+    )
+)
+ AS nome_norm,
+        
+COALESCE(
+    REGEXP_REPLACE(
+        REGEXP_REPLACE(
+            COALESCE(CAST(cnpj_if AS VARCHAR), ''),
+            '[^0-9]', '', 'g'
+        ),
+        '^0+', ''
+    ),
+    ''
+)
+ AS cnpj_norm,
+        TRY_CAST(TRIM(REPLACE(REPLACE(COALESCE(indice, ''), '.', ''), ',', '.')) AS DOUBLE) AS indice,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_reclamacoes_reguladas_procedentes, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_reclamacoes_reguladas_procedentes,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_reclamacoes_reguladas_outras, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_reclamacoes_reguladas_outras,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_reclamacoes_nao_reguladas, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_reclamacoes_nao_reguladas,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_total_reclamacoes, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_total_reclamacoes,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_total_clientes_ccs_scr, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_total_clientes_ccs_scr,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_clientes_ccs, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_clientes_ccs,
+        TRY_CAST(REGEXP_REPLACE(COALESCE(qtd_clientes_scr, '0'), '[^0-9]', '', 'g') AS BIGINT) AS qtd_clientes_scr
+    FROM "database"."raw"."reclamacoes"
+    WHERE instituicao_financeira IS NOT NULL AND TRIM(instituicao_financeira) != ''
+)
+
+SELECT
+    r.*,
+    COALESCE(d.nome_canonico, r.nome_norm) AS nome_canonico
+FROM raw_rec r
+LEFT JOIN "database"."main"."de_para_bancos" d
+    ON r.nome_norm = d.sigla_origem
+    );
+    
+  
+[0m17:28:14.773153 [debug] [Thread-3 (]: SQL status: OK in 0.701 seconds
+[0m17:28:14.872652 [debug] [Thread-3 (]: Using duckdb connection "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:14.874157 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_reclamacoes"} */
+alter table "database"."trusted"."tr_reclamacoes__dbt_tmp" rename to "tr_reclamacoes"
+[0m17:28:15.352504 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:28:15.359113 [debug] [Thread-3 (]: Using duckdb connection "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:15.360488 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_reclamacoes"} */
+
+        COPY "database"."trusted"."tr_reclamacoes" TO 'data/trusted/reclamacoes.parquet' (FORMAT PARQUET)
+      
+[0m17:28:15.616906 [debug] [Thread-1 (]: SQL status: OK in 1.549 seconds
+[0m17:28:15.618143 [debug] [Thread-2 (]: SQL status: OK in 1.548 seconds
+[0m17:28:15.623379 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.tr_bancos"
+[0m17:28:15.626964 [debug] [Thread-2 (]: Using duckdb connection "model.atividade04_dbt.tr_empregados"
+[0m17:28:15.628390 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_bancos"} */
+alter table "database"."trusted"."tr_bancos__dbt_tmp" rename to "tr_bancos"
+[0m17:28:15.630643 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_empregados"} */
+alter table "database"."trusted"."tr_empregados__dbt_tmp" rename to "tr_empregados"
+[0m17:28:15.633059 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:28:15.634850 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:28:15.637542 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.tr_bancos"
+[0m17:28:15.640057 [debug] [Thread-2 (]: Using duckdb connection "model.atividade04_dbt.tr_empregados"
+[0m17:28:15.641471 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_bancos"} */
+
+        COPY "database"."trusted"."tr_bancos" TO 'data/trusted/bancos.parquet' (FORMAT PARQUET)
+      
+[0m17:28:15.642727 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_empregados"} */
+
+        COPY "database"."trusted"."tr_empregados" TO 'data/trusted/empregados.parquet' (FORMAT PARQUET)
+      
+[0m17:28:15.901304 [debug] [Thread-2 (]: SQL status: OK in 0.257 seconds
+[0m17:28:15.911688 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: COMMIT
+[0m17:28:15.912695 [debug] [Thread-2 (]: Using duckdb connection "model.atividade04_dbt.tr_empregados"
+[0m17:28:15.913545 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: COMMIT
+[0m17:28:15.929995 [debug] [Thread-1 (]: SQL status: OK in 0.286 seconds
+[0m17:28:15.930559 [debug] [Thread-3 (]: SQL status: OK in 0.569 seconds
+[0m17:28:15.932231 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: COMMIT
+[0m17:28:15.933921 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: COMMIT
+[0m17:28:15.934883 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.tr_bancos"
+[0m17:28:15.935812 [debug] [Thread-3 (]: Using duckdb connection "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:15.936778 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: COMMIT
+[0m17:28:15.937641 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: COMMIT
+[0m17:28:16.243122 [debug] [Thread-2 (]: SQL status: OK in 0.328 seconds
+[0m17:28:16.256606 [debug] [Thread-2 (]: Using duckdb connection "model.atividade04_dbt.tr_empregados"
+[0m17:28:16.258204 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_empregados"} */
+
+      drop table if exists "database"."trusted"."tr_empregados__dbt_backup" cascade
+    
+[0m17:28:16.279765 [debug] [Thread-1 (]: SQL status: OK in 0.341 seconds
+[0m17:28:16.282182 [debug] [Thread-2 (]: SQL status: OK in 0.022 seconds
+[0m17:28:16.285490 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.tr_bancos"
+[0m17:28:16.355731 [debug] [Thread-2 (]: On model.atividade04_dbt.tr_empregados: Close
+[0m17:28:16.370748 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_bancos"} */
+
+      drop table if exists "database"."trusted"."tr_bancos__dbt_backup" cascade
+    
+[0m17:28:16.378508 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e486e8e10>]}
+[0m17:28:16.387674 [info ] [Thread-2 (]: 2 of 5 OK created sql table model trusted.tr_empregados ........................ [[32mOK[0m in 3.62s]
+[0m17:28:16.390232 [debug] [Thread-2 (]: Finished running node model.atividade04_dbt.tr_empregados
+[0m17:28:16.404287 [debug] [Thread-3 (]: SQL status: OK in 0.465 seconds
+[0m17:28:16.411599 [debug] [Thread-3 (]: Using duckdb connection "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:16.413913 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.tr_reclamacoes"} */
+
+      drop table if exists "database"."trusted"."tr_reclamacoes__dbt_backup" cascade
+    
+[0m17:28:16.408556 [debug] [Thread-1 (]: SQL status: OK in 0.028 seconds
+[0m17:28:16.416634 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:28:16.422715 [debug] [Thread-1 (]: On model.atividade04_dbt.tr_bancos: Close
+[0m17:28:16.426772 [debug] [Thread-3 (]: On model.atividade04_dbt.tr_reclamacoes: Close
+[0m17:28:16.429245 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4854be90>]}
+[0m17:28:16.433353 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4b4efd50>]}
+[0m17:28:16.437635 [info ] [Thread-1 (]: 1 of 5 OK created sql table model trusted.tr_bancos ............................ [[32mOK[0m in 3.67s]
+[0m17:28:16.441212 [info ] [Thread-3 (]: 3 of 5 OK created sql table model trusted.tr_reclamacoes ....................... [[32mOK[0m in 3.67s]
+[0m17:28:16.443805 [debug] [Thread-1 (]: Finished running node model.atividade04_dbt.tr_bancos
+[0m17:28:16.445624 [debug] [Thread-3 (]: Finished running node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:16.452354 [debug] [Thread-4 (]: Began running node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:16.454036 [info ] [Thread-4 (]: 4 of 5 START sql view model delivery.del_reclamacoes_agg ....................... [RUN]
+[0m17:28:16.455980 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.atividade04_dbt.del_reclamacoes_agg'
+[0m17:28:16.457869 [debug] [Thread-4 (]: Began compiling node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:16.462637 [debug] [Thread-4 (]: Writing injected SQL for node "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.480896 [debug] [Thread-4 (]: Began executing node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:16.505486 [debug] [Thread-4 (]: Writing runtime sql for node "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.552271 [debug] [Thread-4 (]: Using duckdb connection "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.553690 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: BEGIN
+[0m17:28:16.558169 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:28:16.561799 [debug] [Thread-4 (]: SQL status: OK in 0.006 seconds
+[0m17:28:16.564622 [debug] [Thread-4 (]: Using duckdb connection "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.567306 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.del_reclamacoes_agg"} */
+
+  
+  create view "database"."delivery"."del_reclamacoes_agg__dbt_tmp" as (
+    
+
+WITH rec AS (
+    SELECT * FROM "database"."trusted"."tr_reclamacoes"
+),
+
+by_cnpj AS (
+    SELECT
+        cnpj_norm AS join_key,
+        'cnpj' AS join_type,
+        SUM(qtd_total_reclamacoes) AS total_reclamacoes,
+        AVG(indice) AS media_indice,
+        COUNT(DISTINCT trimestre) AS trimestres,
+        SUM(qtd_total_clientes_ccs_scr) AS total_clientes,
+        SUM(qtd_reclamacoes_reguladas_procedentes) AS total_procedentes
+    FROM rec
+    WHERE cnpj_norm IS NOT NULL AND cnpj_norm != ''
+    GROUP BY cnpj_norm
+),
+
+by_nome AS (
+    SELECT
+        nome_canonico AS join_key,
+        'nome' AS join_type,
+        SUM(qtd_total_reclamacoes) AS total_reclamacoes,
+        AVG(indice) AS media_indice,
+        COUNT(DISTINCT trimestre) AS trimestres,
+        SUM(qtd_total_clientes_ccs_scr) AS total_clientes,
+        SUM(qtd_reclamacoes_reguladas_procedentes) AS total_procedentes
+    FROM rec
+    WHERE cnpj_norm IS NULL OR cnpj_norm = ''
+    GROUP BY nome_canonico
+),
+
+unioned AS (
+    SELECT * FROM by_cnpj
+    UNION ALL
+    SELECT * FROM by_nome
+)
+
+SELECT
+    join_key,
+    join_type,
+    total_reclamacoes,
+    media_indice,
+    trimestres,
+    total_clientes,
+    total_procedentes,
+    CASE 
+        WHEN total_clientes > 0 THEN CAST(total_reclamacoes AS DOUBLE) / total_clientes 
+        ELSE NULL 
+    END AS taxa_reclamacao_por_cliente,
+    CASE 
+        WHEN total_reclamacoes > 0 THEN CAST(total_procedentes AS DOUBLE) / total_reclamacoes 
+        ELSE NULL 
+    END AS pct_reclamacoes_procedentes
+FROM unioned
+  );
+
+[0m17:28:16.676383 [debug] [Thread-4 (]: SQL status: OK in 0.106 seconds
+[0m17:28:16.681857 [debug] [Thread-4 (]: Using duckdb connection "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.683647 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.del_reclamacoes_agg"} */
+alter view "database"."delivery"."del_reclamacoes_agg__dbt_tmp" rename to "del_reclamacoes_agg"
+[0m17:28:16.686953 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:28:16.690876 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: COMMIT
+[0m17:28:16.693002 [debug] [Thread-4 (]: Using duckdb connection "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.694930 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: COMMIT
+[0m17:28:16.744404 [debug] [Thread-4 (]: SQL status: OK in 0.047 seconds
+[0m17:28:16.749064 [debug] [Thread-4 (]: Using duckdb connection "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:16.753133 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.del_reclamacoes_agg"} */
+
+      drop view if exists "database"."delivery"."del_reclamacoes_agg__dbt_backup" cascade
+    
+[0m17:28:16.756282 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:28:16.760078 [debug] [Thread-4 (]: On model.atividade04_dbt.del_reclamacoes_agg: Close
+[0m17:28:16.762599 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e485f07d0>]}
+[0m17:28:16.765074 [info ] [Thread-4 (]: 4 of 5 OK created sql view model delivery.del_reclamacoes_agg .................. [[32mOK[0m in 0.31s]
+[0m17:28:16.767903 [debug] [Thread-4 (]: Finished running node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:16.771143 [debug] [Thread-1 (]: Began running node model.atividade04_dbt.bancos_indicadores
+[0m17:28:16.774238 [info ] [Thread-1 (]: 5 of 5 START sql table model delivery.bancos_indicadores ....................... [RUN]
+[0m17:28:16.777584 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.atividade04_dbt.tr_bancos, now model.atividade04_dbt.bancos_indicadores)
+[0m17:28:16.780371 [debug] [Thread-1 (]: Began compiling node model.atividade04_dbt.bancos_indicadores
+[0m17:28:16.792505 [debug] [Thread-1 (]: Writing injected SQL for node "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:16.816672 [debug] [Thread-1 (]: Began executing node model.atividade04_dbt.bancos_indicadores
+[0m17:28:16.819737 [debug] [Thread-1 (]: Writing runtime sql for node "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:16.825307 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:16.826115 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: BEGIN
+[0m17:28:16.826818 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:28:16.827927 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:28:16.828659 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:16.829511 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.bancos_indicadores"} */
+
+    
+
+    create  table
+      "database"."delivery"."bancos_indicadores__dbt_tmp"
+  
+    
+    as (
+      
+
+WITH bancos_base AS (
+    SELECT
+        ROW_NUMBER() OVER (ORDER BY b.nome_norm, b.cnpj_norm) AS banco_id,
+        b.nome,
+        b.nome_norm,
+        b.cnpj_norm,
+        b.segmento,
+        COALESCE(d.nome_canonico, b.nome_norm) AS nome_canonico
+    FROM "database"."trusted"."tr_bancos" b
+    LEFT JOIN "database"."main"."de_para_bancos" d
+        ON b.nome_norm = d.sigla_origem
+),
+
+rec_agg AS (
+    SELECT * FROM "database"."delivery"."del_reclamacoes_agg"
+),
+
+emp_base AS (
+    SELECT * FROM "database"."trusted"."tr_empregados"
+),
+
+-- =========================================================================
+-- 1. Casamento com Reclamações (CNPJ -> Nome Canônico -> Fuzzy Matching)
+-- =========================================================================
+-- 1.1 Match exato por CNPJ
+rec_cnpj_match AS (
+    SELECT
+        b.banco_id,
+        r.*
+    FROM bancos_base b
+    INNER JOIN rec_agg r
+        ON b.cnpj_norm = r.join_key
+        AND r.join_type = 'cnpj'
+        AND b.cnpj_norm IS NOT NULL
+        AND b.cnpj_norm != ''
+),
+
+-- 1.2 Match exato por Nome Canônico (para quem não casou por CNPJ)
+rec_nome_match AS (
+    SELECT
+        b.banco_id,
+        r.*
+    FROM bancos_base b
+    INNER JOIN rec_agg r
+        ON b.nome_canonico = r.join_key
+        AND r.join_type = 'nome'
+    WHERE b.banco_id NOT IN (SELECT banco_id FROM rec_cnpj_match)
+),
+
+-- 1.3 Match por Similaridade / Fuzzy (fallback com Jaro-Winkler >= 0.90)
+rec_fuzzy_ranked AS (
+    SELECT
+        b.banco_id,
+        r.*,
+        ROW_NUMBER() OVER (
+            PARTITION BY b.banco_id 
+            ORDER BY jaro_winkler_similarity(b.nome_canonico, r.join_key) DESC
+        ) AS rnk
+    FROM bancos_base b
+    CROSS JOIN (SELECT * FROM rec_agg WHERE join_type = 'nome') r
+    WHERE b.banco_id NOT IN (SELECT banco_id FROM rec_cnpj_match)
+      AND b.banco_id NOT IN (SELECT banco_id FROM rec_nome_match)
+      AND jaro_winkler_similarity(b.nome_canonico, r.join_key) >= 0.90
+),
+rec_fuzzy_match AS (
+    SELECT * EXCLUDE (rnk)
+    FROM rec_fuzzy_ranked
+    WHERE rnk = 1
+),
+
+-- Unificação das Reclamações casadas
+rec_consolidado AS (
+    SELECT * FROM rec_cnpj_match
+    UNION ALL
+    SELECT * FROM rec_nome_match
+    UNION ALL
+    SELECT * FROM rec_fuzzy_match
+),
+
+-- =========================================================================
+-- 2. Casamento com Empregados / Glassdoor (CNPJ -> Nome Canônico -> Fuzzy)
+-- =========================================================================
+-- 2.1 Match exato por CNPJ
+emp_cnpj_match AS (
+    SELECT
+        b.banco_id,
+        e.*
+    FROM bancos_base b
+    INNER JOIN emp_base e
+        ON b.cnpj_norm = e.cnpj_norm
+        AND b.cnpj_norm IS NOT NULL
+        AND b.cnpj_norm != ''
+),
+
+-- 2.2 Match exato por Nome Canônico (para quem não casou por CNPJ)
+emp_nome_match AS (
+    SELECT
+        b.banco_id,
+        e.*
+    FROM bancos_base b
+    INNER JOIN emp_base e
+        ON b.nome_canonico = e.nome_canonico
+    WHERE b.banco_id NOT IN (SELECT banco_id FROM emp_cnpj_match)
+),
+
+-- 2.3 Match por Similaridade / Fuzzy (fallback com Jaro-Winkler >= 0.92)
+emp_fuzzy_ranked AS (
+    SELECT
+        b.banco_id,
+        e.*,
+        ROW_NUMBER() OVER (
+            PARTITION BY b.banco_id 
+            ORDER BY jaro_winkler_similarity(b.nome_canonico, e.nome_canonico) DESC
+        ) AS rnk
+    FROM bancos_base b
+    CROSS JOIN emp_base e
+    WHERE b.banco_id NOT IN (SELECT banco_id FROM emp_cnpj_match)
+      AND b.banco_id NOT IN (SELECT banco_id FROM emp_nome_match)
+      AND jaro_winkler_similarity(b.nome_canonico, e.nome_canonico) >= 0.92
+),
+emp_fuzzy_match AS (
+    SELECT * EXCLUDE (rnk)
+    FROM emp_fuzzy_ranked
+    WHERE rnk = 1
+),
+
+-- Unificação dos Empregados casados
+emp_consolidado AS (
+    SELECT * FROM emp_cnpj_match
+    UNION ALL
+    SELECT * FROM emp_nome_match
+    UNION ALL
+    SELECT * FROM emp_fuzzy_match
+)
+
+-- =========================================================================
+-- 3. Projeção da Tabela Final (OBT)
+-- =========================================================================
+SELECT
+    b.nome,
+    b.nome_norm,
+    b.cnpj_norm,
+    b.segmento,
+    
+    -- Métricas de Reclamações
+    CAST(r.total_reclamacoes AS BIGINT) AS reclamacao_total,
+    r.media_indice AS reclamacao_indice_bacen,
+    CAST(r.trimestres AS BIGINT) AS reclamacao_trimestres,
+    r.taxa_reclamacao_por_cliente AS reclamacao_indice_calculado,
+    r.pct_reclamacoes_procedentes AS reclamacao_pct_procedentes,
+
+    -- Métricas do Glassdoor (Avaliações)
+    e.avaliacao_geral,
+    e.avaliacao_cultura,
+    e.avaliacao_diversidade,
+    e.avaliacao_qualidade_vida,
+    e.avaliacao_lideranca,
+    e.avaliacao_remuneracao,
+    e.avaliacao_carreira,
+    e.avaliacao_recomendam_pct,
+    e.avaliacao_perspectiva_pct
+
+FROM bancos_base b
+LEFT JOIN rec_consolidado r ON b.banco_id = r.banco_id
+LEFT JOIN emp_consolidado e ON b.banco_id = e.banco_id
+    );
+    
+  
+[0m17:28:17.114545 [debug] [Thread-1 (]: SQL status: OK in 0.284 seconds
+[0m17:28:17.117346 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:17.118426 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.bancos_indicadores"} */
+alter table "database"."delivery"."bancos_indicadores__dbt_tmp" rename to "bancos_indicadores"
+[0m17:28:17.119974 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:28:17.122387 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:17.123411 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.bancos_indicadores"} */
+
+        COPY "database"."delivery"."bancos_indicadores" TO 'data/delivery/bancos_indicadores.parquet' (FORMAT PARQUET)
+      
+[0m17:28:17.146709 [debug] [Thread-1 (]: SQL status: OK in 0.022 seconds
+[0m17:28:17.148616 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: COMMIT
+[0m17:28:17.149446 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:17.150229 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: COMMIT
+[0m17:28:17.228923 [debug] [Thread-1 (]: SQL status: OK in 0.078 seconds
+[0m17:28:17.231232 [debug] [Thread-1 (]: Using duckdb connection "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:17.232253 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "model.atividade04_dbt.bancos_indicadores"} */
+
+      drop table if exists "database"."delivery"."bancos_indicadores__dbt_backup" cascade
+    
+[0m17:28:17.233770 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:28:17.235698 [debug] [Thread-1 (]: On model.atividade04_dbt.bancos_indicadores: Close
+[0m17:28:17.237079 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f29042e1-7b59-4eb7-af0b-d1bc981e7a23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e4851df10>]}
+[0m17:28:17.238272 [info ] [Thread-1 (]: 5 of 5 OK created sql table model delivery.bancos_indicadores .................. [[32mOK[0m in 0.46s]
+[0m17:28:17.239652 [debug] [Thread-1 (]: Finished running node model.atividade04_dbt.bancos_indicadores
+[0m17:28:17.242353 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:17.243307 [debug] [MainThread]: On master: BEGIN
+[0m17:28:17.244162 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:28:17.245392 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:28:17.246145 [debug] [MainThread]: On master: COMMIT
+[0m17:28:17.246905 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:17.247576 [debug] [MainThread]: On master: COMMIT
+[0m17:28:17.248577 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:28:17.249269 [debug] [MainThread]: On master: Close
+[0m17:28:17.250067 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:28:17.250696 [debug] [MainThread]: Connection 'model.atividade04_dbt.tr_reclamacoes' was properly closed.
+[0m17:28:17.251358 [debug] [MainThread]: Connection 'model.atividade04_dbt.tr_empregados' was properly closed.
+[0m17:28:17.252027 [debug] [MainThread]: Connection 'model.atividade04_dbt.bancos_indicadores' was properly closed.
+[0m17:28:17.252723 [debug] [MainThread]: Connection 'model.atividade04_dbt.del_reclamacoes_agg' was properly closed.
+[0m17:28:17.253507 [info ] [MainThread]: 
+[0m17:28:17.254296 [info ] [MainThread]: Finished running 4 table models, 1 view model in 0 hours 0 minutes and 4.85 seconds (4.85s).
+[0m17:28:17.255902 [debug] [MainThread]: Command end result
+[0m17:28:17.302810 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:17.308026 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:17.312926 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:17.348598 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/dbt_project/target/run_results.json
+[0m17:28:17.349874 [info ] [MainThread]: 
+[0m17:28:17.351252 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:28:17.352416 [info ] [MainThread]: 
+[0m17:28:17.353371 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m17:28:17.354721 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.5823665, "process_in_blocks": "6288", "process_kernel_time": 1.280532, "process_mem_max_rss": "212704", "process_out_blocks": "0", "process_user_time": 6.000445}
+[0m17:28:17.355552 [debug] [MainThread]: Command `dbt run` succeeded at 17:28:17.355454 after 7.58 seconds
+[0m17:28:17.356388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e534bcad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e535143d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x777e534e7690>]}
+[0m17:28:17.357124 [debug] [MainThread]: Flushing usage events
+[0m17:28:18.049282 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:28:24.071062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b65bc5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b6e09310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b67ad4d0>]}
+
+
+============================== 17:28:24.076247 | e1c32309-2863-4ee6-9ffa-05ef9d2b7f98 ==============================
+[0m17:28:24.076247 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:28:24.077177 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'log_format': 'default', 'invocation_command': 'dbt test --project-dir /opt/dbt_project --profiles-dir /opt/dbt_project --no-partial-parse', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'hints_enabled': 'True', 'log_path': '/opt/dbt_project/logs', 'debug': 'False', 'profiles_dir': '/opt/dbt_project', 'partial_parse': 'False', 'introspect': 'True', 'printer_width': '80', 'empty': 'None', 'no_print': 'None', 'write_json': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m17:28:24.326502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1c32309-2863-4ee6-9ffa-05ef9d2b7f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0ae615510>]}
+[0m17:28:24.385177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e1c32309-2863-4ee6-9ffa-05ef9d2b7f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b9bc6c10>]}
+[0m17:28:24.388263 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m17:28:24.463658 [debug] [MainThread]: checksum: 6c1ae9bd9a97f59fedcbb7b317f743cc733bb2c36d74b192da6d8920653dd0b7, vars: {}, profile: atividade04_duckdb, target: dev, version: 1.12.3
+[0m17:28:24.468069 [debug] [MainThread]: Partial parsing not enabled
+[0m17:28:26.641287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e1c32309-2863-4ee6-9ffa-05ef9d2b7f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0ad388d90>]}
+[0m17:28:26.791787 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:26.800667 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:26.815286 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:26.961042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e1c32309-2863-4ee6-9ffa-05ef9d2b7f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f09bc6c2d0>]}
+[0m17:28:27.025469 [info ] [MainThread]: Found 5 models, 13 data tests, 1 seed, 3 sources, 503 macros
+[0m17:28:27.027919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1c32309-2863-4ee6-9ffa-05ef9d2b7f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f09bc27810>]}
+[0m17:28:27.034775 [info ] [MainThread]: 
+[0m17:28:27.036907 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:28:27.039056 [info ] [MainThread]: 
+[0m17:28:27.041865 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:28:27.055649 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_trusted'
+[0m17:28:27.057811 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_delivery'
+[0m17:28:27.059158 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_main'
+[0m17:28:27.097846 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:27.098396 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:27.098746 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:27.099660 [debug] [ThreadPool]: On list_database_trusted: BEGIN
+[0m17:28:27.100709 [debug] [ThreadPool]: On list_database_delivery: BEGIN
+[0m17:28:27.101539 [debug] [ThreadPool]: On list_database_main: BEGIN
+[0m17:28:27.102400 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:27.103309 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:27.104285 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:27.130218 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m17:28:27.130698 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m17:28:27.131058 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m17:28:27.131689 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:27.132437 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:27.133183 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:27.133867 [debug] [ThreadPool]: On list_database_trusted: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_trusted"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'trusted'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:27.134809 [debug] [ThreadPool]: On list_database_delivery: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_delivery"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'delivery'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:27.135954 [debug] [ThreadPool]: On list_database_main: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_main"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:27.140710 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:27.141211 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:28:27.141596 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:28:27.143145 [debug] [ThreadPool]: On list_database_trusted: ROLLBACK
+[0m17:28:27.144716 [debug] [ThreadPool]: On list_database_delivery: ROLLBACK
+[0m17:28:27.146164 [debug] [ThreadPool]: On list_database_main: ROLLBACK
+[0m17:28:27.147298 [debug] [ThreadPool]: On list_database_trusted: Close
+[0m17:28:27.148061 [debug] [ThreadPool]: On list_database_delivery: Close
+[0m17:28:27.148874 [debug] [ThreadPool]: On list_database_main: Close
+[0m17:28:27.151824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e1c32309-2863-4ee6-9ffa-05ef9d2b7f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f09bef8490>]}
+[0m17:28:27.152820 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:27.153562 [debug] [MainThread]: On master: BEGIN
+[0m17:28:27.154250 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:28:27.155389 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:28:27.156098 [debug] [MainThread]: On master: COMMIT
+[0m17:28:27.156814 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:27.157480 [debug] [MainThread]: On master: COMMIT
+[0m17:28:27.158488 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:28:27.159201 [debug] [MainThread]: On master: Close
+[0m17:28:27.163756 [debug] [Thread-1 (]: Began running node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:27.164496 [debug] [Thread-2 (]: Began running node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:27.164917 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:27.165361 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:27.165939 [info ] [Thread-1 (]: 1 of 13 START test assert_bancos_unicos ........................................ [RUN]
+[0m17:28:27.166727 [info ] [Thread-2 (]: 2 of 13 START test assert_reclamacao_total_positive ............................ [RUN]
+[0m17:28:27.167659 [info ] [Thread-3 (]: 3 of 13 START test not_null_bancos_indicadores_nome ............................ [RUN]
+[0m17:28:27.168504 [info ] [Thread-4 (]: 4 of 13 START test not_null_bancos_indicadores_nome_norm ....................... [RUN]
+[0m17:28:27.169327 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_database_main, now test.atividade04_dbt.assert_bancos_unicos)
+[0m17:28:27.170209 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_database_delivery, now test.atividade04_dbt.assert_reclamacao_total_positive)
+[0m17:28:27.171017 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_database_trusted, now test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1)
+[0m17:28:27.171879 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad'
+[0m17:28:27.172631 [debug] [Thread-1 (]: Began compiling node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:27.173385 [debug] [Thread-2 (]: Began compiling node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:27.174129 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:27.174831 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:27.180330 [debug] [Thread-1 (]: Writing injected SQL for node "test.atividade04_dbt.assert_bancos_unicos"
+[0m17:28:27.182340 [debug] [Thread-2 (]: Writing injected SQL for node "test.atividade04_dbt.assert_reclamacao_total_positive"
+[0m17:28:27.195348 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1"
+[0m17:28:27.201434 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad"
+[0m17:28:27.208073 [debug] [Thread-2 (]: Began executing node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:27.214653 [debug] [Thread-1 (]: Began executing node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:27.223652 [debug] [Thread-2 (]: Writing runtime sql for node "test.atividade04_dbt.assert_reclamacao_total_positive"
+[0m17:28:27.225333 [debug] [Thread-1 (]: Writing runtime sql for node "test.atividade04_dbt.assert_bancos_unicos"
+[0m17:28:27.339131 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:27.349635 [debug] [Thread-3 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1"
+[0m17:28:27.350917 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:27.354411 [debug] [Thread-1 (]: Using duckdb connection "test.atividade04_dbt.assert_bancos_unicos"
+[0m17:28:27.355434 [debug] [Thread-2 (]: Using duckdb connection "test.atividade04_dbt.assert_reclamacao_total_positive"
+[0m17:28:27.358502 [debug] [Thread-4 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad"
+[0m17:28:27.360108 [debug] [Thread-1 (]: On test.atividade04_dbt.assert_bancos_unicos: BEGIN
+[0m17:28:27.361742 [debug] [Thread-2 (]: On test.atividade04_dbt.assert_reclamacao_total_positive: BEGIN
+[0m17:28:27.363752 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:28:27.364718 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:28:27.366176 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.366923 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.367461 [debug] [Thread-1 (]: Using duckdb connection "test.atividade04_dbt.assert_bancos_unicos"
+[0m17:28:27.368238 [debug] [Thread-2 (]: Using duckdb connection "test.atividade04_dbt.assert_reclamacao_total_positive"
+[0m17:28:27.369000 [debug] [Thread-1 (]: On test.atividade04_dbt.assert_bancos_unicos: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.assert_bancos_unicos"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Garante que não existem bancos duplicados na tabela final delivery
+SELECT
+    COALESCE(NULLIF(cnpj_norm, ''), nome_norm) AS chave,
+    COUNT(*) AS total
+FROM "database"."delivery"."bancos_indicadores"
+GROUP BY 1
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.369784 [debug] [Thread-2 (]: On test.atividade04_dbt.assert_reclamacao_total_positive: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.assert_reclamacao_total_positive"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Garante que o total de reclamações não seja negativo
+SELECT
+    nome,
+    reclamacao_total
+FROM "database"."delivery"."bancos_indicadores"
+WHERE reclamacao_total < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.374432 [debug] [Thread-3 (]: Using duckdb connection "test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1"
+[0m17:28:27.375410 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1: BEGIN
+[0m17:28:27.376285 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad"
+[0m17:28:27.376701 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:28:27.377555 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad: BEGIN
+[0m17:28:27.379093 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.379632 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:28:27.380504 [debug] [Thread-3 (]: Using duckdb connection "test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1"
+[0m17:28:27.381783 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.382341 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome
+from "database"."delivery"."bancos_indicadores"
+where nome is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.383239 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad"
+[0m17:28:27.384024 [debug] [Thread-2 (]: SQL status: OK in 0.013 seconds
+[0m17:28:27.385174 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome_norm
+from "database"."delivery"."bancos_indicadores"
+where nome_norm is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.385634 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.389606 [debug] [Thread-2 (]: On test.atividade04_dbt.assert_reclamacao_total_positive: ROLLBACK
+[0m17:28:27.392706 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1: ROLLBACK
+[0m17:28:27.393518 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m17:28:27.395469 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1: Close
+[0m17:28:27.396142 [debug] [Thread-2 (]: On test.atividade04_dbt.assert_reclamacao_total_positive: Close
+[0m17:28:27.397963 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad: ROLLBACK
+[0m17:28:27.399354 [info ] [Thread-3 (]: 3 of 13 PASS not_null_bancos_indicadores_nome .................................. [[32mPASS[0m in 0.23s]
+[0m17:28:27.400508 [info ] [Thread-2 (]: 2 of 13 PASS assert_reclamacao_total_positive .................................. [[32mPASS[0m in 0.23s]
+[0m17:28:27.401555 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad: Close
+[0m17:28:27.402323 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:27.403314 [debug] [Thread-2 (]: Finished running node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:27.404433 [info ] [Thread-4 (]: 4 of 13 PASS not_null_bancos_indicadores_nome_norm ............................. [[32mPASS[0m in 0.23s]
+[0m17:28:27.405118 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:27.405976 [debug] [Thread-2 (]: Began running node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:27.406934 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:27.407715 [info ] [Thread-3 (]: 5 of 13 START test not_null_de_para_bancos_nome_canonico ....................... [RUN]
+[0m17:28:27.408453 [info ] [Thread-2 (]: 6 of 13 START test not_null_de_para_bancos_sigla_origem ........................ [RUN]
+[0m17:28:27.409203 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:27.410160 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1, now test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06)
+[0m17:28:27.411035 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.assert_reclamacao_total_positive, now test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282)
+[0m17:28:27.411828 [info ] [Thread-4 (]: 7 of 13 START test not_null_del_reclamacoes_agg_join_key ....................... [RUN]
+[0m17:28:27.412572 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:27.413285 [debug] [Thread-2 (]: Began compiling node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:27.414083 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad, now test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d)
+[0m17:28:27.422457 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06"
+[0m17:28:27.423040 [debug] [Thread-1 (]: SQL status: OK in 0.052 seconds
+[0m17:28:27.430681 [debug] [Thread-2 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282"
+[0m17:28:27.431998 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:27.434937 [debug] [Thread-1 (]: On test.atividade04_dbt.assert_bancos_unicos: ROLLBACK
+[0m17:28:27.442075 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d"
+[0m17:28:27.443488 [debug] [Thread-1 (]: On test.atividade04_dbt.assert_bancos_unicos: Close
+[0m17:28:27.444727 [info ] [Thread-1 (]: 1 of 13 PASS assert_bancos_unicos .............................................. [[32mPASS[0m in 0.28s]
+[0m17:28:27.445741 [debug] [Thread-1 (]: Finished running node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:27.446612 [debug] [Thread-1 (]: Began running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:27.447396 [info ] [Thread-1 (]: 8 of 13 START test not_null_del_reclamacoes_agg_join_type ...................... [RUN]
+[0m17:28:27.448332 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.assert_bancos_unicos, now test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694)
+[0m17:28:27.449045 [debug] [Thread-1 (]: Began compiling node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:27.455144 [debug] [Thread-1 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694"
+[0m17:28:27.456426 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:27.458750 [debug] [Thread-4 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d"
+[0m17:28:27.464036 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:27.466741 [debug] [Thread-3 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06"
+[0m17:28:27.467385 [debug] [Thread-2 (]: Began executing node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:27.468585 [debug] [Thread-1 (]: Began executing node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:27.469230 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d"
+[0m17:28:27.471239 [debug] [Thread-2 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282"
+[0m17:28:27.473445 [debug] [Thread-1 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694"
+[0m17:28:27.474299 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d: BEGIN
+[0m17:28:27.476383 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:28:27.478044 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.479751 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d"
+[0m17:28:27.480608 [debug] [Thread-3 (]: Using duckdb connection "test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06"
+[0m17:28:27.482450 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select join_key
+from "database"."delivery"."del_reclamacoes_agg"
+where join_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.485696 [debug] [Thread-2 (]: Using duckdb connection "test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282"
+[0m17:28:27.486358 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06: BEGIN
+[0m17:28:27.486773 [debug] [Thread-1 (]: Using duckdb connection "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694"
+[0m17:28:27.488290 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282: BEGIN
+[0m17:28:27.489100 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:28:27.490237 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694: BEGIN
+[0m17:28:27.490696 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m17:28:27.491402 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:28:27.492653 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m17:28:27.493208 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:28:27.495043 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d: ROLLBACK
+[0m17:28:27.496052 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m17:28:27.496640 [debug] [Thread-3 (]: Using duckdb connection "test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06"
+[0m17:28:27.497781 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m17:28:27.498571 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d: Close
+[0m17:28:27.499117 [debug] [Thread-2 (]: Using duckdb connection "test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282"
+[0m17:28:27.499885 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome_canonico
+from "database"."main"."de_para_bancos"
+where nome_canonico is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.500681 [debug] [Thread-1 (]: Using duckdb connection "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694"
+[0m17:28:27.501770 [info ] [Thread-4 (]: 7 of 13 PASS not_null_del_reclamacoes_agg_join_key ............................. [[32mPASS[0m in 0.09s]
+[0m17:28:27.502388 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sigla_origem
+from "database"."main"."de_para_bancos"
+where sigla_origem is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.503844 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select join_type
+from "database"."delivery"."del_reclamacoes_agg"
+where join_type is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.504349 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.505195 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:27.506914 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.508604 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06: ROLLBACK
+[0m17:28:27.509061 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.509688 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:27.511438 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282: ROLLBACK
+[0m17:28:27.512616 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06: Close
+[0m17:28:27.514344 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694: ROLLBACK
+[0m17:28:27.515111 [info ] [Thread-4 (]: 9 of 13 START test not_null_tr_bancos_nome ..................................... [RUN]
+[0m17:28:27.516479 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282: Close
+[0m17:28:27.517294 [info ] [Thread-3 (]: 5 of 13 PASS not_null_de_para_bancos_nome_canonico ............................. [[32mPASS[0m in 0.11s]
+[0m17:28:27.519317 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694: Close
+[0m17:28:27.519966 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d, now test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210)
+[0m17:28:27.521063 [info ] [Thread-2 (]: 6 of 13 PASS not_null_de_para_bancos_sigla_origem .............................. [[32mPASS[0m in 0.11s]
+[0m17:28:27.522045 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:27.523243 [info ] [Thread-1 (]: 8 of 13 PASS not_null_del_reclamacoes_agg_join_type ............................ [[32mPASS[0m in 0.07s]
+[0m17:28:27.524250 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:27.525500 [debug] [Thread-2 (]: Finished running node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:27.526653 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:27.527710 [debug] [Thread-1 (]: Finished running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:27.533881 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210"
+[0m17:28:27.534748 [debug] [Thread-2 (]: Began running node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:27.535572 [info ] [Thread-3 (]: 10 of 13 START test not_null_tr_bancos_nome_norm ............................... [RUN]
+[0m17:28:27.536629 [debug] [Thread-1 (]: Began running node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:27.538017 [info ] [Thread-2 (]: 11 of 13 START test not_null_tr_empregados_nome_canonico ....................... [RUN]
+[0m17:28:27.539568 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06, now test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93)
+[0m17:28:27.540767 [info ] [Thread-1 (]: 12 of 13 START test not_null_tr_reclamacoes_nome_canonico ...................... [RUN]
+[0m17:28:27.542042 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282, now test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8)
+[0m17:28:27.543066 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:27.544057 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694, now test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c)
+[0m17:28:27.544953 [debug] [Thread-2 (]: Began compiling node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:27.551978 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93"
+[0m17:28:27.553161 [debug] [Thread-1 (]: Began compiling node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:27.553999 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:27.560146 [debug] [Thread-2 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8"
+[0m17:28:27.568010 [debug] [Thread-1 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c"
+[0m17:28:27.570109 [debug] [Thread-4 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210"
+[0m17:28:27.571361 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:27.574710 [debug] [Thread-3 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93"
+[0m17:28:27.576548 [debug] [Thread-2 (]: Began executing node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:27.579133 [debug] [Thread-2 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8"
+[0m17:28:27.579620 [debug] [Thread-1 (]: Began executing node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:27.582874 [debug] [Thread-1 (]: Writing runtime sql for node "test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c"
+[0m17:28:27.584481 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210"
+[0m17:28:27.585432 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210: BEGIN
+[0m17:28:27.586115 [debug] [Thread-3 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93"
+[0m17:28:27.587121 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:28:27.588044 [debug] [Thread-2 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8"
+[0m17:28:27.588583 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93: BEGIN
+[0m17:28:27.589860 [debug] [Thread-1 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c"
+[0m17:28:27.590386 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m17:28:27.590978 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8: BEGIN
+[0m17:28:27.591762 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:28:27.592663 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c: BEGIN
+[0m17:28:27.593466 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210"
+[0m17:28:27.594250 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:28:27.595600 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m17:28:27.595996 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:28:27.596888 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome
+from "database"."trusted"."tr_bancos"
+where nome is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.598183 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m17:28:27.598758 [debug] [Thread-3 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93"
+[0m17:28:27.600171 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m17:28:27.601491 [debug] [Thread-2 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8"
+[0m17:28:27.602008 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.602748 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome_norm
+from "database"."trusted"."tr_bancos"
+where nome_norm is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.603554 [debug] [Thread-1 (]: Using duckdb connection "test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c"
+[0m17:28:27.604391 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome_canonico
+from "database"."trusted"."tr_empregados"
+where nome_canonico is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.606326 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210: ROLLBACK
+[0m17:28:27.607646 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nome_canonico
+from "database"."trusted"."tr_reclamacoes"
+where nome_canonico is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.608104 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.609608 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.610063 [debug] [Thread-4 (]: On test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210: Close
+[0m17:28:27.612238 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93: ROLLBACK
+[0m17:28:27.612613 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:28:27.614358 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8: ROLLBACK
+[0m17:28:27.615517 [info ] [Thread-4 (]: 9 of 13 PASS not_null_tr_bancos_nome ........................................... [[32mPASS[0m in 0.10s]
+[0m17:28:27.617108 [debug] [Thread-3 (]: On test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93: Close
+[0m17:28:27.619223 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c: ROLLBACK
+[0m17:28:27.656421 [debug] [Thread-2 (]: On test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8: Close
+[0m17:28:27.660785 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:27.662671 [info ] [Thread-3 (]: 10 of 13 PASS not_null_tr_bancos_nome_norm ..................................... [[32mPASS[0m in 0.12s]
+[0m17:28:27.664295 [debug] [Thread-1 (]: On test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c: Close
+[0m17:28:27.665609 [info ] [Thread-2 (]: 11 of 13 PASS not_null_tr_empregados_nome_canonico ............................. [[32mPASS[0m in 0.12s]
+[0m17:28:27.666526 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:27.669999 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:27.671766 [info ] [Thread-1 (]: 12 of 13 PASS not_null_tr_reclamacoes_nome_canonico ............................ [[32mPASS[0m in 0.13s]
+[0m17:28:27.672904 [debug] [Thread-2 (]: Finished running node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:27.673876 [info ] [Thread-4 (]: 13 of 13 START test unique_de_para_bancos_sigla_origem ......................... [RUN]
+[0m17:28:27.676204 [debug] [Thread-1 (]: Finished running node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:27.678223 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210, now test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad)
+[0m17:28:27.680237 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:27.688446 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad"
+[0m17:28:27.695111 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:27.697420 [debug] [Thread-4 (]: Writing runtime sql for node "test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad"
+[0m17:28:27.705592 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad"
+[0m17:28:27.707075 [debug] [Thread-4 (]: On test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad: BEGIN
+[0m17:28:27.707810 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:28:27.708965 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m17:28:27.709705 [debug] [Thread-4 (]: Using duckdb connection "test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad"
+[0m17:28:27.710467 [debug] [Thread-4 (]: On test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "node_id": "test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    sigla_origem as unique_field,
+    count(*) as n_records
+
+from "database"."main"."de_para_bancos"
+where sigla_origem is not null
+group by sigla_origem
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:28:27.714818 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m17:28:27.716781 [debug] [Thread-4 (]: On test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad: ROLLBACK
+[0m17:28:27.717948 [debug] [Thread-4 (]: On test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad: Close
+[0m17:28:27.718996 [info ] [Thread-4 (]: 13 of 13 PASS unique_de_para_bancos_sigla_origem ............................... [[32mPASS[0m in 0.04s]
+[0m17:28:27.719982 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:27.722407 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:27.723299 [debug] [MainThread]: On master: BEGIN
+[0m17:28:27.724021 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:28:27.725317 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:28:27.726105 [debug] [MainThread]: On master: COMMIT
+[0m17:28:27.726840 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:28:27.727564 [debug] [MainThread]: On master: COMMIT
+[0m17:28:27.728653 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:28:27.729650 [debug] [MainThread]: On master: Close
+[0m17:28:27.731173 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:28:27.732743 [debug] [MainThread]: Connection 'test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93' was properly closed.
+[0m17:28:27.734484 [debug] [MainThread]: Connection 'test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8' was properly closed.
+[0m17:28:27.735397 [debug] [MainThread]: Connection 'test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c' was properly closed.
+[0m17:28:27.736217 [debug] [MainThread]: Connection 'test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad' was properly closed.
+[0m17:28:27.737005 [info ] [MainThread]: 
+[0m17:28:27.737808 [info ] [MainThread]: Finished running 13 data tests in 0 hours 0 minutes and 0.70 seconds (0.70s).
+[0m17:28:27.740089 [debug] [MainThread]: Command end result
+[0m17:28:27.826493 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:27.851599 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:27.873114 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:27.893028 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/dbt_project/target/run_results.json
+[0m17:28:27.893947 [info ] [MainThread]: 
+[0m17:28:27.894741 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:28:27.895483 [info ] [MainThread]: 
+[0m17:28:27.896213 [info ] [MainThread]: Done. PASS=13 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=13
+[0m17:28:27.897489 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 3.9102972, "process_in_blocks": "1912", "process_kernel_time": 0.448321, "process_mem_max_rss": "184684", "process_out_blocks": "0", "process_user_time": 4.823457}
+[0m17:28:27.898303 [debug] [MainThread]: Command `dbt test` succeeded at 17:28:27.898211 after 3.91 seconds
+[0m17:28:27.898996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b6650050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b6642fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f0b6643150>]}
+[0m17:28:27.899738 [debug] [MainThread]: Flushing usage events
+[0m17:28:28.461570 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:28:33.747431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bb3e0d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bb453d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bb63ef90>]}
+
+
+============================== 17:28:33.752763 | b6827451-d69a-4b25-bef2-d4fd4179de50 ==============================
+[0m17:28:33.752763 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:28:33.753820 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'quiet': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate --project-dir /opt/dbt_project --profiles-dir /opt/dbt_project --no-partial-parse', 'write_json': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'static_parser': 'True', 'version_check': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'warn_error': 'None', 'log_path': '/opt/dbt_project/logs', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'empty': 'None', 'log_format': 'default', 'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/opt/dbt_project'}
+[0m17:28:33.960472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6827451-d69a-4b25-bef2-d4fd4179de50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bb2ae1d0>]}
+[0m17:28:34.018973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6827451-d69a-4b25-bef2-d4fd4179de50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74be9d68d0>]}
+[0m17:28:34.021830 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m17:28:34.096810 [debug] [MainThread]: checksum: 6c1ae9bd9a97f59fedcbb7b317f743cc733bb2c36d74b192da6d8920653dd0b7, vars: {}, profile: atividade04_duckdb, target: dev, version: 1.12.3
+[0m17:28:34.100199 [debug] [MainThread]: Partial parsing not enabled
+[0m17:28:36.075593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b6827451-d69a-4b25-bef2-d4fd4179de50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74b23a3d50>]}
+[0m17:28:36.255796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b6827451-d69a-4b25-bef2-d4fd4179de50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74b22b4e90>]}
+[0m17:28:36.257072 [info ] [MainThread]: Found 5 models, 13 data tests, 1 seed, 3 sources, 503 macros
+[0m17:28:36.257968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6827451-d69a-4b25-bef2-d4fd4179de50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74b238f4d0>]}
+[0m17:28:36.260814 [info ] [MainThread]: 
+[0m17:28:36.261869 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:28:36.262722 [info ] [MainThread]: 
+[0m17:28:36.263714 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:28:36.269131 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_trusted'
+[0m17:28:36.270302 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_main'
+[0m17:28:36.271395 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_database_delivery'
+[0m17:28:36.332660 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:36.333729 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:36.335764 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:36.337355 [debug] [ThreadPool]: On list_database_trusted: BEGIN
+[0m17:28:36.339846 [debug] [ThreadPool]: On list_database_main: BEGIN
+[0m17:28:36.341721 [debug] [ThreadPool]: On list_database_delivery: BEGIN
+[0m17:28:36.343778 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:36.345372 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:36.347337 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:36.405645 [debug] [ThreadPool]: SQL status: OK in 0.062 seconds
+[0m17:28:36.407838 [debug] [ThreadPool]: SQL status: OK in 0.062 seconds
+[0m17:28:36.409298 [debug] [ThreadPool]: Using duckdb connection "list_database_trusted"
+[0m17:28:36.410147 [debug] [ThreadPool]: SQL status: OK in 0.063 seconds
+[0m17:28:36.412763 [debug] [ThreadPool]: Using duckdb connection "list_database_main"
+[0m17:28:36.414066 [debug] [ThreadPool]: On list_database_trusted: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_trusted"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'trusted'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:36.416135 [debug] [ThreadPool]: Using duckdb connection "list_database_delivery"
+[0m17:28:36.418627 [debug] [ThreadPool]: On list_database_main: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_main"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:36.426558 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m17:28:36.508130 [debug] [ThreadPool]: On list_database_delivery: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "list_database_delivery"} */
+select
+      'database' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'delivery'
+    and lower(table_catalog) = 'database'
+  
+[0m17:28:36.513000 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:28:36.515331 [debug] [ThreadPool]: On list_database_trusted: ROLLBACK
+[0m17:28:36.520890 [debug] [ThreadPool]: On list_database_trusted: Close
+[0m17:28:36.520017 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:28:36.518999 [debug] [ThreadPool]: On list_database_main: ROLLBACK
+[0m17:28:36.526596 [debug] [ThreadPool]: On list_database_delivery: ROLLBACK
+[0m17:28:36.530882 [debug] [ThreadPool]: On list_database_main: Close
+[0m17:28:36.534371 [debug] [ThreadPool]: On list_database_delivery: Close
+[0m17:28:36.538776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6827451-d69a-4b25-bef2-d4fd4179de50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74b23c5690>]}
+[0m17:28:36.557067 [debug] [Thread-2 (]: Began running node seed.atividade04_dbt.de_para_bancos
+[0m17:28:36.556030 [debug] [Thread-1 (]: Began running node model.atividade04_dbt.tr_bancos
+[0m17:28:36.599760 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_database_delivery, now model.atividade04_dbt.tr_bancos)
+[0m17:28:36.593052 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_database_main, now seed.atividade04_dbt.de_para_bancos)
+[0m17:28:36.602292 [debug] [Thread-1 (]: Began compiling node model.atividade04_dbt.tr_bancos
+[0m17:28:36.604181 [debug] [Thread-2 (]: Began compiling node seed.atividade04_dbt.de_para_bancos
+[0m17:28:36.613279 [debug] [Thread-1 (]: Writing injected SQL for node "model.atividade04_dbt.tr_bancos"
+[0m17:28:36.614862 [debug] [Thread-2 (]: Began executing node seed.atividade04_dbt.de_para_bancos
+[0m17:28:36.616816 [debug] [Thread-2 (]: Finished running node seed.atividade04_dbt.de_para_bancos
+[0m17:28:36.618393 [debug] [Thread-4 (]: Began running node model.atividade04_dbt.tr_empregados
+[0m17:28:36.618970 [debug] [Thread-3 (]: Began running node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:36.619416 [debug] [Thread-2 (]: Began running node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:36.620369 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.atividade04_dbt.tr_empregados'
+[0m17:28:36.621651 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_database_trusted, now model.atividade04_dbt.tr_reclamacoes)
+[0m17:28:36.622222 [debug] [Thread-1 (]: Began executing node model.atividade04_dbt.tr_bancos
+[0m17:28:36.623195 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.atividade04_dbt.de_para_bancos, now test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06)
+[0m17:28:36.624000 [debug] [Thread-4 (]: Began compiling node model.atividade04_dbt.tr_empregados
+[0m17:28:36.624784 [debug] [Thread-3 (]: Began compiling node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:36.625975 [debug] [Thread-1 (]: Finished running node model.atividade04_dbt.tr_bancos
+[0m17:28:36.626784 [debug] [Thread-2 (]: Began compiling node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:36.630149 [debug] [Thread-4 (]: Writing injected SQL for node "model.atividade04_dbt.tr_empregados"
+[0m17:28:36.633138 [debug] [Thread-3 (]: Writing injected SQL for node "model.atividade04_dbt.tr_reclamacoes"
+[0m17:28:36.634103 [debug] [Thread-1 (]: Began running node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:36.647281 [debug] [Thread-2 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06"
+[0m17:28:36.649446 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.atividade04_dbt.tr_bancos, now test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282)
+[0m17:28:36.651600 [debug] [Thread-1 (]: Began compiling node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:36.658475 [debug] [Thread-3 (]: Began executing node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:36.658994 [debug] [Thread-4 (]: Began executing node model.atividade04_dbt.tr_empregados
+[0m17:28:36.660776 [debug] [Thread-1 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282"
+[0m17:28:36.662100 [debug] [Thread-3 (]: Finished running node model.atividade04_dbt.tr_reclamacoes
+[0m17:28:36.662544 [debug] [Thread-2 (]: Began executing node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:36.663563 [debug] [Thread-4 (]: Finished running node model.atividade04_dbt.tr_empregados
+[0m17:28:36.665090 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:36.666487 [debug] [Thread-2 (]: Finished running node test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06
+[0m17:28:36.667453 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:36.668372 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.atividade04_dbt.tr_reclamacoes, now test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad)
+[0m17:28:36.669272 [debug] [Thread-2 (]: Began running node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:36.670185 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.atividade04_dbt.tr_empregados, now test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210)
+[0m17:28:36.670824 [debug] [Thread-1 (]: Began executing node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:36.671368 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:36.672184 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_de_para_bancos_nome_canonico.b89fa28c06, now test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93)
+[0m17:28:36.672958 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:36.674045 [debug] [Thread-1 (]: Finished running node test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282
+[0m17:28:36.682052 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad"
+[0m17:28:36.682804 [debug] [Thread-2 (]: Began compiling node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:36.689046 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210"
+[0m17:28:36.689958 [debug] [Thread-1 (]: Began running node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:36.697049 [debug] [Thread-2 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93"
+[0m17:28:36.698717 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_de_para_bancos_sigla_origem.340b440282, now model.atividade04_dbt.del_reclamacoes_agg)
+[0m17:28:36.700275 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:36.700691 [debug] [Thread-1 (]: Began compiling node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:36.701996 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad
+[0m17:28:36.702939 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:36.705005 [debug] [Thread-1 (]: Writing injected SQL for node "model.atividade04_dbt.del_reclamacoes_agg"
+[0m17:28:36.705652 [debug] [Thread-2 (]: Began executing node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:36.706932 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:36.708109 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210
+[0m17:28:36.709786 [debug] [Thread-2 (]: Finished running node test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93
+[0m17:28:36.710663 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.unique_de_para_bancos_sigla_origem.5a083f3aad, now test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c)
+[0m17:28:36.711634 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:36.713239 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:36.714534 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_tr_bancos_nome.4aa8e00210, now test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8)
+[0m17:28:36.715141 [debug] [Thread-1 (]: Began executing node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:36.721321 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c"
+[0m17:28:36.722072 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:36.723399 [debug] [Thread-1 (]: Finished running node model.atividade04_dbt.del_reclamacoes_agg
+[0m17:28:36.730024 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8"
+[0m17:28:36.731330 [debug] [Thread-2 (]: Began running node model.atividade04_dbt.bancos_indicadores
+[0m17:28:36.731835 [debug] [Thread-1 (]: Began running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:36.733193 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_tr_bancos_nome_norm.2fbf6acb93, now model.atividade04_dbt.bancos_indicadores)
+[0m17:28:36.734090 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:36.734581 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.atividade04_dbt.del_reclamacoes_agg, now test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d)
+[0m17:28:36.735347 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:36.735715 [debug] [Thread-2 (]: Began compiling node model.atividade04_dbt.bancos_indicadores
+[0m17:28:36.736830 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c
+[0m17:28:36.737574 [debug] [Thread-1 (]: Began compiling node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:36.738655 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8
+[0m17:28:36.742269 [debug] [Thread-2 (]: Writing injected SQL for node "model.atividade04_dbt.bancos_indicadores"
+[0m17:28:36.743215 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:36.749144 [debug] [Thread-1 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d"
+[0m17:28:36.750983 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_tr_reclamacoes_nome_canonico.7bce0e7c4c, now test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694)
+[0m17:28:36.752331 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:36.758668 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694"
+[0m17:28:36.759868 [debug] [Thread-2 (]: Began executing node model.atividade04_dbt.bancos_indicadores
+[0m17:28:36.760289 [debug] [Thread-1 (]: Began executing node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:36.761349 [debug] [Thread-2 (]: Finished running node model.atividade04_dbt.bancos_indicadores
+[0m17:28:36.762476 [debug] [Thread-1 (]: Finished running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d
+[0m17:28:36.764039 [debug] [Thread-4 (]: Began running node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:36.764541 [debug] [Thread-2 (]: Began running node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:36.765046 [debug] [Thread-1 (]: Began running node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:36.765645 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:36.766589 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_tr_empregados_nome_canonico.bbba3433b8, now test.atividade04_dbt.assert_bancos_unicos)
+[0m17:28:36.767593 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.atividade04_dbt.bancos_indicadores, now test.atividade04_dbt.assert_reclamacao_total_positive)
+[0m17:28:36.768513 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_del_reclamacoes_agg_join_key.fd143a2d3d, now test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1)
+[0m17:28:36.770893 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694
+[0m17:28:36.771807 [debug] [Thread-4 (]: Began compiling node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:36.772631 [debug] [Thread-2 (]: Began compiling node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:36.773375 [debug] [Thread-1 (]: Began compiling node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:36.774215 [debug] [Thread-3 (]: Began running node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:36.776237 [debug] [Thread-4 (]: Writing injected SQL for node "test.atividade04_dbt.assert_bancos_unicos"
+[0m17:28:36.778140 [debug] [Thread-2 (]: Writing injected SQL for node "test.atividade04_dbt.assert_reclamacao_total_positive"
+[0m17:28:36.784497 [debug] [Thread-1 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1"
+[0m17:28:36.785335 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.atividade04_dbt.not_null_del_reclamacoes_agg_join_type.898f21a694, now test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad)
+[0m17:28:36.788094 [debug] [Thread-3 (]: Began compiling node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:36.794375 [debug] [Thread-3 (]: Writing injected SQL for node "test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad"
+[0m17:28:36.795611 [debug] [Thread-2 (]: Began executing node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:36.796031 [debug] [Thread-1 (]: Began executing node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:36.796419 [debug] [Thread-4 (]: Began executing node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:36.797446 [debug] [Thread-2 (]: Finished running node test.atividade04_dbt.assert_reclamacao_total_positive
+[0m17:28:36.798636 [debug] [Thread-1 (]: Finished running node test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1
+[0m17:28:36.799775 [debug] [Thread-4 (]: Finished running node test.atividade04_dbt.assert_bancos_unicos
+[0m17:28:36.801299 [debug] [Thread-3 (]: Began executing node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:36.802812 [debug] [Thread-3 (]: Finished running node test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad
+[0m17:28:36.804775 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:28:36.805497 [debug] [MainThread]: Connection 'test.atividade04_dbt.not_null_bancos_indicadores_nome_norm.848d486fad' was properly closed.
+[0m17:28:36.806168 [debug] [MainThread]: Connection 'test.atividade04_dbt.assert_reclamacao_total_positive' was properly closed.
+[0m17:28:36.806799 [debug] [MainThread]: Connection 'test.atividade04_dbt.not_null_bancos_indicadores_nome.36c8f0eac1' was properly closed.
+[0m17:28:36.807451 [debug] [MainThread]: Connection 'test.atividade04_dbt.assert_bancos_unicos' was properly closed.
+[0m17:28:36.810233 [debug] [MainThread]: Command end result
+[0m17:28:37.092273 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:37.099293 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:37.115139 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:37.126852 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/dbt_project/target/run_results.json
+[0m17:28:37.572165 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m17:28:37.574237 [info ] [MainThread]: Building catalog
+[0m17:28:37.593433 [debug] [ThreadPool]: Acquiring new duckdb connection 'database.information_schema'
+[0m17:28:37.611863 [debug] [ThreadPool]: Using duckdb connection "database.information_schema"
+[0m17:28:37.613747 [debug] [ThreadPool]: On database.information_schema: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "atividade04_duckdb", "target_name": "dev", "connection_name": "database.information_schema"} */
+
+    
+    with tables as (
+      select *
+    from (
+        select
+            t.database_name as table_database,
+            t.schema_name as table_schema,
+            t.table_name as table_name,
+            'BASE TABLE' as table_type,
+            t.comment as table_comment
+        from duckdb_tables() t
+        where upper(t.database_name) = upper('database')
+
+        union all
+
+        select
+            v.database_name as table_database,
+            v.schema_name as table_schema,
+            v.view_name as table_name,
+            'VIEW' as table_type,
+            v.comment as table_comment
+        from duckdb_views() v
+        where upper(v.database_name) = upper('database')
+    ) catalog_tables
+      
+        where (
+
+                (
+                    upper(table_schema) = upper('raw')
+                    and upper(table_name) = upper('reclamacoes')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main')
+                    and upper(table_name) = upper('de_para_bancos')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('raw')
+                    and upper(table_name) = upper('empregados')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('delivery')
+                    and upper(table_name) = upper('bancos_indicadores')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('trusted')
+                    and upper(table_name) = upper('tr_reclamacoes')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('trusted')
+                    and upper(table_name) = upper('tr_empregados')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('trusted')
+                    and upper(table_name) = upper('tr_bancos')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('raw')
+                    and upper(table_name) = upper('bancos')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('delivery')
+                    and upper(table_name) = upper('del_reclamacoes_agg')
+                ))
+    
+    ),
+    columns as (
+      select *
+    from (
+        select
+            c.database_name as table_database,
+            c.schema_name as table_schema,
+            c.table_name as table_name,
+            c.column_name as column_name,
+            c.column_index as column_index,
+            c.data_type as column_type,
+            c.comment as column_comment
+        from duckdb_columns() c
+        where upper(c.database_name) = upper('database')
+    ) catalog_columns
+      
+        where (
+
+                (
+                    upper(table_schema) = upper('raw')
+                    and upper(table_name) = upper('reclamacoes')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('main')
+                    and upper(table_name) = upper('de_para_bancos')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('raw')
+                    and upper(table_name) = upper('empregados')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('delivery')
+                    and upper(table_name) = upper('bancos_indicadores')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('trusted')
+                    and upper(table_name) = upper('tr_reclamacoes')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('trusted')
+                    and upper(table_name) = upper('tr_empregados')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('trusted')
+                    and upper(table_name) = upper('tr_bancos')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('raw')
+                    and upper(table_name) = upper('bancos')
+                ) or 
+
+                (
+                    upper(table_schema) = upper('delivery')
+                    and upper(table_name) = upper('del_reclamacoes_agg')
+                ))
+    
+    )
+    select
+        tables.table_database,
+        tables.table_schema,
+        tables.table_name,
+        tables.table_type,
+        tables.table_comment,
+        columns.column_name,
+        columns.column_index,
+        columns.column_type,
+        columns.column_comment,
+        null as table_owner
+    from tables
+    join columns using (table_database, table_schema, table_name)
+    order by table_schema, table_name, column_index
+  
+  
+[0m17:28:37.615497 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:37.683912 [debug] [ThreadPool]: SQL status: OK in 0.068 seconds
+[0m17:28:37.690779 [debug] [ThreadPool]: On database.information_schema: Close
+[0m17:28:37.711396 [debug] [MainThread]: Wrote artifact CatalogArtifact to /opt/dbt_project/target/catalog.json
+[0m17:28:37.763098 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/dbt_project/target/manifest.json
+[0m17:28:37.768536 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/dbt_project/target/semantic_manifest.json
+[0m17:28:37.773405 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/dbt_project/target/osi_document.json
+[0m17:28:37.774180 [info ] [MainThread]: Catalog written to /opt/dbt_project/target/catalog.json
+[0m17:28:37.775596 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 4.111018, "process_in_blocks": "3792", "process_kernel_time": 0.368324, "process_mem_max_rss": "181404", "process_out_blocks": "0", "process_user_time": 4.455923}
+[0m17:28:37.776501 [debug] [MainThread]: Command `dbt docs generate` succeeded at 17:28:37.776406 after 4.11 seconds
+[0m17:28:37.777235 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m17:28:37.777915 [debug] [MainThread]: Connection 'database.information_schema' was properly closed.
+[0m17:28:37.778638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bbc29ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bb438810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a74bb2af390>]}
+[0m17:28:37.779431 [debug] [MainThread]: Flushing usage events
+[0m17:28:38.395480 [debug] [MainThread]: An error was encountered while trying to flush usage events

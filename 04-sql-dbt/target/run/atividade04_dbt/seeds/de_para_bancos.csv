@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "database"."main"."de_para_bancos" ("sigla_origem" text,"nome_canonico" text)
+  ;
+    -- dbt seed --
+    
+          COPY "database"."main"."de_para_bancos" FROM '/opt/dbt_project/seeds/de_para_bancos.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
