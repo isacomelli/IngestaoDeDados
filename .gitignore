@@ -1,0 +1,31 @@
+.env
+**/.terraform/
+**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+hop/audit/
+hop/*.log
+
+# dados brutos originais
+dados/_original.zip
+
+01-etl-visual/aws
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# config local
+02-etl-python/src/config.yaml
+
+03-etl-pyspark/data/
+
+04-sql-dbt/data/
+04-sql-dbt/target/
+04-sql-dbt/dbt_packages/
+04-sql-dbt/logs/
+04-sql-dbt/.user.yml
